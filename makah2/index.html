@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكة المكرمة | Discover Makkah</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="logo.png" alt="مكة المكرمة" class="header-logo-img">
+                </div>
+                
+                <div class="nav-wrapper">
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#landmarks" class="nav-link" data-ar="المعالم" data-en="Landmarks">المعالم</a></li>
+                        <li><a href="#map" class="nav-link" data-ar="الخريطة" data-en="Map">الخريطة</a></li>
+                        <li><a href="#contact" class="nav-link" data-ar="التواصل" data-en="Contact">التواصل</a></li>
+                        <li class="nav-lang-toggle">
+                            <button class="lang-toggle" id="langToggle" aria-label="Toggle Language">
+                                <span class="lang-ar">AR</span>
+                                <span class="lang-en">EN</span>
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <button class="lang-toggle lang-toggle-desktop" id="langToggleDesktop" aria-label="Toggle Language">
+                        <span class="lang-ar">AR</span>
+                        <span class="lang-en">EN</span>
+                    </button>
+                    
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i>
+                <span data-ar="باقة حصرية من فنادقي MyHotels.SA" data-en="Exclusive package from فنادقي MyHotels.SA">باقة حصرية من فنادقي MyHotels.SA</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-title-main" data-ar="اكتشف مكة" data-en="Discover Makkah">اكتشف مكة</span>
+                <span class="hero-title-sub" data-ar="قبلة المسلمين" data-en="The Heart of Islam">قبلة المسلمين</span>
+            </h1>
+            <p class="hero-description" data-ar="رحلة عبر التاريخ والحضارة في أقدس بقاع الأرض." data-en="A journey through history and faith in the holiest place on Earth.">رحلة عبر التاريخ والحضارة في أقدس بقاع الأرض.</p>
+            <a href="#landmarks" class="btn btn-primary hero-btn" data-ar="استكشف المعالم" data-en="Explore Landmarks">
+                استكشف المعالم
+            </a>
+        </div>
+        
+        <!-- Hero Statistics -->
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-number" data-end="2.6">0</div>
+                <div class="stat-label" data-ar="عدد السكان" data-en="M Residents">عدد السكان</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-end="16.5">0</div>
+                <div class="stat-label" data-ar="عدد الزوار" data-en="M Visitors">عدد الزوار</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-end="1828">0</div>
+                <div class="stat-label" data-ar="عدد المساجد" data-en="Mosques">عدد المساجد</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Religious Landmarks Section -->
+    <section class="landmarks-section" id="landmarks">
+        <div class="container">
+            <h2 class="section-title" data-ar="المعالم الدينية" data-en="Religious Landmarks"></h2>
+            <p class="section-subtitle" data-ar="اكتشف الأماكن المقدسة والعريقة" data-en="Discover sacred and historic places"></p>
+            
+            <div class="landmarks-grid">
+                <!-- Landmark Card 1 -->
+                <div class="landmark-card">
+                    <div class="card-image">
+                        <img src="img/msgdel7ram.png" alt="المسجد الحرام">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="المسجد الحرام" data-en="The Grand Mosque"></h3>
+                        <p class="card-description" data-ar="أكبر مسجد في العالم، يستقبل ملايين الحجاج والمعتمرين والمصلين سنويا. يجمع بين الأهمية الدينية والتاريخية والعمارة الخلابة، مما يجعله وجهة تقدم تجربة روحانية عميقة للمسلمين." data-en="The largest mosque in the world, it welcomes millions of pilgrims, Umrah performers, and worshippers annually. It combines religious and historical significance with stunning architecture, making it a destination that offers a deep spiritual experience for Muslims."></p>
+                    </div>
+                </div>
+
+                <!-- Landmark Card 2 -->
+                <div class="landmark-card">
+                    <div class="card-image">
+                        <img src="img/brgsa3a.png" alt="متحف برج الساعة">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="متحف برج الساعة" data-en="Clock Tower Museum"></h3>
+                        <p class="card-description" data-ar="يعتبر المتحف الوجهة الأمثل لعشاق علم الفلك، حيث يقدم تجربة تفاعلية وممتعة لجميع الزوار. يتيح لهم استكشاف جمال الكون، وعجائب النظام الشمسي، وآليات حساب الوقت. بالإضافة إلى ذلك، يضم مجموعة متنوعة من الأنشطة الفريدة المناسبة لجميع الفئات العمرية." data-en="The museum is the ideal destination for astronomy enthusiasts, offering an interactive and enjoyable experience for all visitors. It allows them to explore the beauty of the universe, the wonders of the solar system, and the mechanisms of time calculation. In addition, it includes a variety of unique activities suitable for all age groups."></p>
+                    </div>
+                </div>
+
+                <!-- Landmark Card 3 -->
+                <div class="landmark-card">
+                    <div class="card-image">
+                        <img src="img/msn3.png" alt="مصنع كسوة الكعبة">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="مصنع كسوة الكعبة المشرفة" data-en="Kiswa Factory"></h3>
+                        <p class="card-description" data-ar="مصنع متخصص في إنتاج كسوة الكعبة المشرفة، حيث تصنع بدقة متناهية من الحرير المطرز بخيوط مطلية بالذهب، مزينة بآيات قرآنية تزين جدران الكعبة المشرفة." data-en="A specialized factory for producing the Kiswa of the Holy Kaaba, where it is meticulously crafted from silk embroidered with gold-plated threads, adorned with Quranic verses that decorate the walls of the Holy Kaaba."></p>
+                    </div>
+                </div>
+
+                <!-- Landmark Card 4 -->
+                <div class="landmark-card">
+                    <div class="card-image">
+                        <img src="img/mt7fkraan.png" alt="متحف القرآن الكريم">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="متحف القرآن الكريم" data-en="Holy Qur'an Museum"></h3>
+                        <p class="card-description" data-ar="أول متحف خاص يُعنى بتاريخ القرآن الكريم ونسخه في مكة المكرمة. يقع المتحف ضمن منطقة حراء الثقافية، ويقدم للزوار مجموعة مميزة من المخطوطات القرآنية النادرة، مستخدما أحدث التقنيات المتحفية لإثراء تجربتهم." data-en="The first specialized museum dedicated to the history of the Holy Quran and its copies in Makkah Al-Mukarramah. The museum is located within the Hira Cultural District and offers visitors a unique collection of rare Quranic manuscripts, utilizing the latest museum technologies to enrich their experience."></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural & Historical Sites Section -->
+    <section class="cultural-section">
+        <div class="container">
+            <h2 class="section-title" data-ar="المعالم الثقافية والتاريخية" data-en="Cultural & Historical Sites"></h2>
+            <p class="section-subtitle" data-ar="مواقع تاريخية ذات أهمية دينية وثقافية" data-en="Historical sites of religious and cultural importance"></p>
+            
+            <div class="landmarks-grid">
+                <!-- Cultural Card 1 -->
+                <div class="landmark-card">
+                    <div class="card-image">
+                        <img src="img/mgra3en.png" alt="منطقة حراء الثقافية">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="منطقة حراء الثقافية" data-en="Hira Cultural District"></h3>
+                        <p class="card-description" data-ar="تقدم منطقة حراء الثقافية، الواقعة بالقرب من جبل النور، أحد أشهر معالم مكة المكرمة، في شارع حسين سرحان، تجربة ثرية فريدة، حيث تأخذ الزوار في رحلة ثقافية وتاريخية وترفيهية إلى الماضي، تاركة انطباعا لا ينسى. تضم المنطقة متحفي القرآن الكريم وكتاب الوحي، بالإضافة إلى العديد من أماكن الجلوس والمقاهي ومتاجر الهدايا، ومجموعة متنوعة من الأنشطة المناسبة لجميع الأعمار." data-en="The Hira Cultural District, located near Jabal al-Noor, one of the most famous landmarks of Makkah Al-Mukarramah, on Hussein Sarhan Street, offers a rich and unique experience, taking visitors on a cultural, historical, and entertaining journey to the past, leaving an unforgettable impression. The district includes the Holy Quran Museum and the Revelation Book Museum, in addition to many seating areas, cafes, gift shops, and a variety of activities suitable for all ages."></p>
+                    </div>
+                </div>
+
+                <!-- Cultural Card 2 -->
+                <div class="landmark-card">
+                    <div class="card-image">
+                        <img src="img/gblnoor.png" alt="غار حراء">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="غار حراء" data-en="Hira Cave"></h3>
+                        <p class="card-description" data-ar="موقع أحد أعظم أحداث التاريخ - نزول الوحي - عندما نزل جبريل عليه السلام بأولى آيات القرآن الكريم على النبي محمد صلى الله عليه وسلم. يمكن للزوار الوصول إلى الغار عبر مسار صاعد معبد حديثا، مما يسهل الوصول إلى أحد أهم المعالم التاريخية في مكة المكرمة." data-en="Site of one of the greatest events in history - the revelation - when Gabriel (peace be upon him) descended with the first verses of the Holy Quran to Prophet Muhammad (peace be upon him). Visitors can reach the cave via a newly paved ascending path, making it easy to access one of the most important historical landmarks in Makkah Al-Mukarramah."></p>
+                    </div>
+                </div>
+
+                <!-- Cultural Card 3 -->
+                <div class="landmark-card">
+                    <div class="card-image">
+                        <img src="img/gblthor.png" alt="غار ثور">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="غار ثور" data-en="Thawr Cave"></h3>
+                        <p class="card-description" data-ar="يقع هذا الجبل جنوب مكة المكرمة، وهو المكان الذي لجأ إليه النبي محمد صلى الله عليه وسلم وصاحبه أبو بكر الصديق رضي الله عنه في كهفه، مختبئين من قريش أثناء هجرتهم إلى المدينة المنورة." data-en="This mountain is located south of Makkah Al-Mukarramah, and it is the place where Prophet Muhammad (peace be upon him) and his companion Abu Bakr al-Siddiq (may Allah be pleased with him) took refuge in its cave, hiding from Quraysh during their migration to Madinah."></p>
+                    </div>
+                </div>
+
+                <!-- Cultural Card 4 -->
+                <div class="landmark-card">
+                    <div class="card-image">
+                        <img src="img/msgdelgn.png" alt="مسجد الجن">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="مسجد الجن" data-en="Al-Jinn Mosque"></h3>
+                        <p class="card-description" data-ar="يتمتع مسجد الجن بأهمية تاريخية ودينية، إذ يعتقد أنه المكان الذي استمعت فيه مجموعة من الجن إلى النبي محمد صلى الله عليه وسلم وهو يتلو القرآن الكريم." data-en="Al-Jinn Mosque enjoys historical and religious importance, as it is believed to be the place where a group of jinn listened to Prophet Muhammad (peace be upon him) as he recited the Holy Quran."></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Museums & Exhibitions Section -->
+    <section class="museums-section">
+        <div class="container">
+            <h2 class="section-title" data-ar="المعارض والمتاحف" data-en="Museums & Exhibitions"></h2>
+            <p class="section-subtitle" data-ar="استكشف التراث الإسلامي والحضارة" data-en="Explore Islamic heritage and civilization"></p>
+            
+            <div class="landmarks-grid landmarks-grid-three">
+                <!-- Museum Card 1 -->
+                <div class="landmark-card">
+                    <div class="card-image">
+                        <img src="img/m3rddawlly.png" alt="المعرض والمتحف الدولي">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="المعرض والمتحف الدولي للسيرة النبوية والحضارة الإسلامية" data-en="International Exhibition & Museum of Prophet's Biography & Islamic Civilization"></h3>
+                        <p class="card-description" data-ar="استكشف حياة النبي محمد صلى الله عليه وسلم عبر التاريخ، وسيرته العطرة، وحياته مع زوجاته وصحابته. يقدم المتحف هذه التفاصيل بأسلوب روائي شيق. يقع المعرض في وقف الملك عبد العزيز (برج الساعة)." data-en="Explore the life of Prophet Muhammad (peace be upon him) through history, his noble biography, and his life with his wives and companions. The museum presents these details in an engaging narrative style. The exhibition is located in the King Abdulaziz Endowment (Clock Tower)."></p>
+                    </div>
+                </div>
+
+                <!-- Museum Card 2 -->
+                <div class="landmark-card">
+                    <div class="card-image">
+                        <img src="img/m3radwa7y.png" alt="معرض الوحي">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="معرض الوحي" data-en="Revelation Exhibition"></h3>
+                        <p class="card-description" data-ar="يعرض قصة نزول الوحي من أول نوره في غار حراء، بالإضافة إلى جوانب مفصلة من سيرة النبي محمد صلى الله عليه وسلم. يضم المتحف قاعات مجهزة بأحدث تقنيات العرض المرئي والسمعي، مما يوفر للزوار تجربة تفاعلية تثري معرفتهم بسيرة النبي." data-en="It showcases the story of the revelation's descent from its first light in the Cave of Hira, in addition to detailed aspects of the biography of Prophet Muhammad (peace be upon him). The museum includes halls equipped with the latest visual and audio display technologies, providing visitors with an interactive experience that enriches their knowledge of the Prophet's biography."></p>
+                    </div>
+                </div>
+
+                <!-- Museum Card 3 -->
+                <div class="landmark-card">
+                    <div class="card-image">
+                        <img src="img/m3radelhrameen.png" alt="معرض الحرمين الشريفين">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title" data-ar="معرض الحرمين الشريفين" data-en="Two Holy Mosques Exhibition"></h3>
+                        <p class="card-description" data-ar="يقدم معرض الحرمين الشريفين قطعا أثرية وصورا نادرة توثق تاريخ مكة المكرمة والمدينة المنورة، مسلطا الضوء على تطور خدمات الحجاج على مر العصور." data-en="The Exhibition of the Two Holy Mosques presents archaeological pieces and rare photographs documenting the history of Makkah Al-Mukarramah and Madinah Al-Munawwarah, highlighting the evolution of pilgrim services throughout the ages."></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mount of Mercy & Pilgrimage Section -->
+    <section class="pilgrimage-section">
+        <div class="container">
+            <div class="pilgrimage-content">
+                <h2 class="section-title" data-ar="جبل الرحمة والحج والعمرة" data-en="Mount of Mercy & Pilgrimage"></h2>
+                <p class="pilgrimage-text" data-ar="يعد شهر ذو الحجة من أهم المواسم السنوية لأداء الشعائر الدينية حول العالم. خلال شهر ذي الحجة، يسافر ملايين المسلمين إلى مكة المكرمة والمشاعر المقدسة لأداء فريضة الحج، وهي فريضة على كل مسلم مرة واحدة في العمر. أما العمرة، فيمكن أداؤها في أي وقت من السنة. جبل الرحمة يقع في سهول عرفات، حيث ألقى النبي محمد صلى الله عليه وسلم خطبة الوداع. يتجمع الحجاج هناك في يوم عرفة، أهم أيام الحج، لإتمام مناسكهم المقدسة." data-en="The month of Dhul Hijjah is considered one of the most important annual seasons for performing religious rituals around the world. During Dhul Hijjah, millions of Muslims travel to Makkah Al-Mukarramah and the holy sites to perform the Hajj pilgrimage, which is an obligation for every Muslim once in a lifetime. As for Umrah, it can be performed at any time of the year. Mount of Mercy is located in the plains of Arafat, where Prophet Muhammad (peace be upon him) delivered his Farewell Sermon. Pilgrims gather there on the Day of Arafat, one of the most important days of Hajj, to complete their sacred rituals."></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="map-section" id="map">
+        <div class="container">
+            <h2 class="section-title" data-ar="خريطة المعالم" data-en="Landmarks Map"></h2>
+            <p class="section-subtitle" data-ar="استكشف مواقع المعالم الرئيسية في مكة" data-en="Explore the locations of major landmarks in Makkah"></p>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.2438735049167!2d39.8262318!3d21.4225084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c21a4e27a0f67b%3A0x59a5f7df8c6fe0d6!2z2KfZhNmF2YjYp9mGINmE2KfYtNmK2LPZhiDZhNiv2LPZhNmK2K8!5e0!3m2!1sar!2ssa!4v1234567890" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0; border-radius: 12px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-ar="تواصل معنا" data-en="Contact Us"></h2>
+            <p class="section-subtitle" data-ar="نحن هنا للإجابة على استفساراتك" data-en="We're here to answer your inquiries"></p>
+            
+            <div class="contact-wrapper">
+                <div class="contact-cards">
+                    <a href="https://api.whatsapp.com/send/?phone=966920033025&text=%D8%B7%D9%84%D8%A8+%D8%AD%D8%AC%D8%B2+%D9%81%D9%8A+%D9%85%D8%AF%D9%8A%D9%86%D8%A9%0A%D8%B9%D8%AF%D8%AF+%D8%A7%D9%84%D9%83%D8%A8%D8%A7%D8%B1%0A%D8%A3%D8%B9%D9%85%D8%A7%D8%B1+%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84%0A%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE+%D8%A7%D9%84%D8%AF%D8%AE%D9%88%D9%84+-+%D9%85%D9%8A%D9%84%D8%A7%D8%AF%D9%8A%0A%D8%B9%D8%AF%D8%AF+%D8%A7%D9%84%D9%84%D9%8A%D8%A7%D9%84%D9%8A&type=phone_number&app_absent=0" class="contact-card" target="_blank">
+                        <i class="fa-brands fa-whatsapp card-icon whatsapp-icon"></i>
+                        <h3 class="card-title" data-ar="تواصل عبر الواتساب" data-en="Contact via WhatsApp">تواصل عبر الواتساب</h3>
+                        <p class="card-description" data-ar="تواصل معنا مباشرة عبر الواتساب" data-en="Contact us directly via WhatsApp">تواصل معنا مباشرة عبر الواتساب</p>
+                    </a>
+                    
+                    <a href="tel:+966920033025" class="contact-card">
+                        <i class="fas fa-phone card-icon call-icon"></i>
+                        <h3 class="card-title" data-ar="اتصل بنا" data-en="Call Us">اتصل بنا</h3>
+                        <p class="card-description" data-ar="اتصل بنا الآن للاستفسار أو الحجز" data-en="Call us now for inquiries or booking">اتصل بنا الآن للاستفسار أو الحجز</p>
+                    </a>
+                    
+                    <a href="mailto:CC@MyHotels.SA" class="contact-card">
+                        <i class="fas fa-envelope card-icon email-icon"></i>
+                        <h3 class="card-title" data-ar="أرسل بريد إلكتروني" data-en="Send Email">أرسل بريد إلكتروني</h3>
+                        <p class="card-description" data-ar="أرسل لنا بريداً وسنرد عليك قريباً" data-en="Send us an email and we'll respond soon">أرسل لنا بريداً وسنرد عليك قريباً</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="مكة المكرمة" class="footer-logo-img">
+                    <p class="footer-description" data-ar="رحلة عبر التاريخ والحضارة في أقدس بقاع الأرض." data-en="A journey through history and faith in the holiest place on Earth.">رحلة عبر التاريخ والحضارة في أقدس بقاع الأرض.</p>
+                    <div class="footer-social" style="margin-top: 1.5rem;">
+                        <a href="https://facebook.com/MyHotelsSA" target="_blank" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/MyHotelsSA" target="_blank" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/MyHotelsSA" target="_blank" class="social-link" aria-label="Twitter/X">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://youtube.com/MyHotelsSA" target="_blank" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/MyHotelsSA" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-column-title" data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+                        <ul class="footer-list">
+                            <li><a href="#landmarks" data-ar="المعالم" data-en="Landmarks">المعالم</a></li>
+                            <li><a href="#map" data-ar="الخريطة" data-en="Map">الخريطة</a></li>
+                            <li><a href="#contact" data-ar="التواصل" data-en="Contact">التواصل</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-column-title" data-ar="تابعنا" data-en="Follow Us">تابعنا</h4>
+                        <ul class="footer-list">
+                            <li>
+                                <i class="fab fa-facebook-f"></i>
+                                <a href="https://facebook.com/MyHotelsSA" target="_blank" data-ar="فيسبوك" data-en="Facebook">فيسبوك</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-instagram"></i>
+                                <a href="https://instagram.com/MyHotelsSA" target="_blank" data-ar="إنستغرام" data-en="Instagram">إنستغرام</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-twitter"></i>
+                                <a href="https://twitter.com/MyHotelsSA" target="_blank" data-ar="تويتر/إكس" data-en="Twitter/X">تويتر/إكس</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-youtube"></i>
+                                <a href="https://youtube.com/MyHotelsSA" target="_blank" data-ar="يوتيوب" data-en="YouTube">يوتيوب</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-linkedin-in"></i>
+                                <a href="https://linkedin.com/company/MyHotelsSA" target="_blank" data-ar="لينكدإن" data-en="LinkedIn">لينكدإن</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-column-title" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h4>
+                        <ul class="footer-list">
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+966920033025" data-ar="+966 920 033 025" data-en="+966 920 033 025">+966 920 033 025</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:CC@MyHotels.SA" data-ar="CC@MyHotels.SA" data-en="CC@MyHotels.SA">CC@MyHotels.SA</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright" data-ar="فنادقي MyHotels.SA" data-en="فنادقي MyHotels.SA"></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://api.whatsapp.com/send/?phone=966920033025&text=%D8%B7%D9%84%D8%A8+%D8%AD%D8%AC%D8%B2+%D9%81%D9%8A+%D9%85%D8%AF%D9%8A%D9%86%D8%A9%0A%D8%B9%D8%AF%D8%AF+%D8%A7%D9%84%D9%83%D8%A8%D8%A7%D8%B1%0A%D8%A3%D8%B9%D9%85%D8%A7%D8%B1+%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84%0A%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE+%D8%A7%D9%84%D8%AF%D8%AE%D9%88%D9%84+-+%D9%85%D9%8A%D9%84%D8%A7%D8%AF%D9%8A%0A%D8%B9%D8%AF%D8%AF+%D8%A7%D9%84%D9%84%D9%8A%D8%A7%D9%84%D9%8A&type=phone_number&app_absent=0" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

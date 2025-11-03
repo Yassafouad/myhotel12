@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعلم اللغة العربية في مكة المكرمة</title>
+    <meta name="description" content="رحلة تجمع بين العلم، والثقافة، والروحانية – بشهادة معتمدة من جامعة أم القرى.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+        
+        body {
+            direction: rtl;
+            overflow-x: hidden;
+            max-width: 100vw;
+            position: relative;
+        }
+        
+        /* Modern Header */
+        .header {
+            background: #FFFFFF;
+            border-bottom: 1px solid rgba(0, 129, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .header.scrolled {
+            background: #FFFFFF;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .logo-text {
+            background: linear-gradient(135deg, #0081FF 0%, #0081FF 50%, #0081FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Modern Hero with Background Image */
+        .hero-section {
+            background: 
+                linear-gradient(135deg, rgba(0, 69, 150, 0.65) 0%, rgba(0, 102, 204, 0.65) 100%),
+                url('https://images.unsplash.com/photo-1564769625905-50e93615e769?q=80&w=2000') center/cover no-repeat;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+        }
+        
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(0, 69, 150, 0.1) 0%, transparent 60%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Floating Particles */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: particleFloat 10s infinite;
+        }
+        
+        @keyframes particleFloat {
+            0%, 100% { 
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { 
+                transform: translateY(-100vh) translateX(50px);
+                opacity: 0;
+            }
+        }
+        
+        /* Modern CTA Button */
+        .modern-cta {
+            background: linear-gradient(135deg, #0081FF 0%, #0081FF 100%);
+            box-shadow: 0 10px 40px rgba(0, 129, 255, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .modern-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .modern-cta:hover::before {
+            left: 100%;
+        }
+        
+        .modern-cta:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 20px 60px rgba(0, 129, 255, 0.5);
+        }
+        
+        /* Ultra Modern Card */
+        .ultra-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 24px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ultra-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0081FF, #0081FF, #0081FF);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        .ultra-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+        }
+        
+        /* Icon Container with Gradient */
+        .icon-box {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #0081FF 0%, #0081FF 100%);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 15px 35px rgba(0, 129, 255, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .icon-box::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            background: linear-gradient(45deg, #0081FF, #0081FF, #0081FF);
+            border-radius: 24px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        
+        .ultra-card:hover .icon-box {
+            transform: rotateY(360deg) scale(1.1);
+        }
+        
+        .ultra-card:hover .icon-box::after {
+            opacity: 1;
+            animation: rotate 3s linear infinite;
+        }
+        
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Journey Timeline */
+        .journey-timeline {
+            position: relative;
+        }
+        
+        .journey-item {
+            position: relative;
+            padding-right: 80px;
+            padding-bottom: 60px;
+        }
+        
+        .journey-item::before {
+            content: '';
+            position: absolute;
+            right: 28px;
+            top: 65px;
+            width: 4px;
+            height: calc(100% - 20px);
+            background: linear-gradient(180deg, #0081FF 0%, #0081FF 100%);
+        }
+        
+        .journey-item:last-child::before {
+            display: none;
+        }
+        
+        .journey-number {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0081FF 0%, #0081FF 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #1e293b;
+            box-shadow: 0 10px 30px rgba(0, 129, 255, 0.4);
+            border: 4px solid white;
+        }
+        
+        /* Pricing Card Modern */
+        .pricing-card {
+            background: white;
+            border-radius: 32px;
+            padding: 2.5rem;
+            border: 2px solid #e5e7eb;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 129, 255, 0.05), rgba(0, 129, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        
+        .pricing-card:hover::before {
+            opacity: 1;
+        }
+        
+        .pricing-card:hover {
+            transform: scale(1.05);
+            border-color: #0081FF;
+            box-shadow: 0 30px 80px rgba(0, 129, 255, 0.2);
+        }
+        
+        .pricing-card.featured {
+            background: linear-gradient(135deg, #0081FF 0%, #0081FF 100%);
+            border-color: #0081FF;
+            box-shadow: 0 25px 70px rgba(0, 129, 255, 0.3);
+            transform: scale(1.08);
+        }
+        
+        .pricing-card.featured * {
+            color: white !important;
+        }
+        
+        /* Service Card Glass Effect */
+        .service-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 28px;
+            padding: 2.5rem;
+            border: 1px solid rgba(0, 129, 255, 0.2);
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+        }
+        
+        .service-card:hover {
+            background: linear-gradient(135deg, #0081FF 0%, #0081FF 100%);
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0, 129, 255, 0.3);
+        }
+        
+        .service-card:hover * {
+            color: white !important;
+        }
+        
+        /* WhatsApp Button Modern */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 35px;
+            left: 35px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.5);
+            z-index: 9999;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 15px 50px rgba(37, 211, 102, 0.7);
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 10px 40px rgba(37, 211, 102, 0.5), 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            50% {
+                box-shadow: 0 10px 40px rgba(37, 211, 102, 0.5), 0 0 0 20px rgba(37, 211, 102, 0);
+            }
+        }
+        
+        /* Section Title Modern */
+        .section-title {
+            position: relative;
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #0081FF 0%, #0081FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, #0081FF, #0081FF, #0081FF);
+            border-radius: 10px;
+        }
+        
+        /* Motivational Section */
+        .motivation-section {
+            background: linear-gradient(135deg, #0081FF 0%, #0066CC 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .motivation-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 129, 255, 0.15) 0%, transparent 70%);
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-50px, -50px); }
+        }
+        
+        /* Footer with same background as motivation section */
+        footer.footer-gradient {
+            background: linear-gradient(135deg, #0081FF 0%, #0066CC 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer.footer-gradient::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 129, 255, 0.15) 0%, transparent 70%);
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        footer.footer-gradient > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+            max-width: 100vw;
+            width: 85%;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        @media (max-width: 480px) {
+            .mobile-menu {
+                width: 90%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header img {
+                height: 3rem !important;
+            }
+        }
+        
+        /* Container fix for mobile */
+        .container {
+            max-width: 100%;
+        }
+        
+        section {
+            overflow-x: hidden;
+        }
+        
+        /* Image Carousel Styling */
+        .image-carousel {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+        
+        .carousel-image {
+            min-width: 100%;
+            height: 100%;
+        }
+        
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+        
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-dot.active {
+            background: #0081FF;
+            width: 24px;
+            border-radius: 4px;
+        }
+        
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+        }
+        
+        .image-carousel:hover .carousel-arrow {
+            opacity: 1;
+        }
+        
+        .carousel-arrow.prev {
+            right: 10px;
+        }
+        
+        .carousel-arrow.next {
+            left: 10px;
+        }
+        
+        .carousel-arrow:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-section {
+                min-height: 100vh;
+                background-position: center center;
+                background-size: cover;
+                padding-top: 80px;
+                overflow-x: hidden;
+            }
+            
+            .hero-content {
+                padding: 2rem 1rem 3rem 1rem;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem !important;
+                line-height: 1.2;
+            }
+            
+            .hero-section p {
+                font-size: 1.25rem !important;
+            }
+            
+            .hero-section p br {
+                display: none;
+            }
+            
+            /* Hero Badge Responsive */
+            .hero-section .inline-block span[data-lang-key="hero-badge"] {
+                font-size: 0.75rem !important;
+                padding: 0.5rem 1rem !important;
+                line-height: 1.4 !important;
+                display: inline-block;
+                white-space: normal;
+                max-width: 90vw;
+                text-align: center;
+                word-wrap: break-word;
+            }
+            
+            .motivation-star {
+                font-size: 4rem !important;
+                line-height: 1.3 !important;
+                padding-top: 1.5rem !important;
+                margin-top: 1rem !important;
+                display: block !important;
+            }
+            
+            .motivation-section {
+                padding-top: 6rem !important;
+            }
+            
+            .modern-cta {
+                padding: 0.875rem 2rem !important;
+                font-size: 1.125rem !important;
+            }
+            
+            .stats-container {
+                gap: 0.75rem !important;
+                margin-top: 3rem !important;
+                padding: 0 0.5rem;
+            }
+            
+            .stats-container > div {
+                padding: 1rem !important;
+                min-width: 0;
+            }
+            
+            .stats-container .text-4xl {
+                font-size: 2rem !important;
+            }
+            
+            .grid {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        
+        /* Footer Grid Custom Styling */
+        #footer-grid {
+            display: grid;
+            grid-template-columns: 2.2fr 1fr 1fr 1.5fr 1.8fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        
+        @media (min-width: 1200px) {
+            #footer-grid {
+                grid-template-columns: 2.2fr 1fr 1fr 1.5fr 1.8fr;
+            }
+        }
+        
+        @media (max-width: 1200px) and (min-width: 969px) {
+            #footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1.5fr 1.5fr;
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 968px) and (min-width: 641px) {
+            #footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            #footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-section {
+                background-attachment: scroll;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem !important;
+            }
+            
+            .hero-section p {
+                font-size: 1.125rem !important;
+            }
+            
+            /* Hero Badge Extra Small Screens */
+            .hero-section .inline-block span[data-lang-key="hero-badge"] {
+                font-size: 0.65rem !important;
+                padding: 0.4rem 0.75rem !important;
+                line-height: 1.3 !important;
+                max-width: 95vw;
+            }
+            
+            .motivation-star {
+                font-size: 3rem !important;
+                line-height: 1.3 !important;
+                padding-top: 1.5rem !important;
+                margin-top: 1rem !important;
+                display: block !important;
+            }
+            
+            .motivation-section {
+                padding-top: 6rem !important;
+            }
+            
+            .modern-cta {
+                padding: 0.75rem 1.5rem !important;
+                font-size: 1rem !important;
+            }
+            
+            .flex-wrap {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr) !important;
+                padding: 0 !important;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            /* Hero Badge Medium Small Screens */
+            .hero-section .inline-block span[data-lang-key="hero-badge"] {
+                font-size: 0.7rem !important;
+                padding: 0.45rem 0.9rem !important;
+                line-height: 1.35 !important;
+                max-width: 92vw;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            /* Hero Badge Very Small Screens */
+            .hero-section .inline-block span[data-lang-key="hero-badge"] {
+                font-size: 0.55rem !important;
+                padding: 0.3rem 0.6rem !important;
+                line-height: 1.25 !important;
+                max-width: 98vw;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Modern Header -->
+    <header class="header fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <img src="logo.png" alt="ATTC - وكالة الأهرام للسفر والسياحة" class="h-14 w-auto">
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#hero" class="text-gray-700 hover:text-[#0081FF] font-bold transition-colors" data-lang-key="nav-home">الرئيسية</a>
+                    <a href="#features" class="text-gray-700 hover:text-[#0081FF] font-bold transition-colors" data-lang-key="nav-features">المميزات</a>
+                    <a href="#journey" class="text-gray-700 hover:text-[#0081FF] font-bold transition-colors" data-lang-key="nav-journey">الرحلة</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-[#0081FF] font-bold transition-colors" data-lang-key="nav-pricing">الأسعار</a>
+                    <a href="#contact" class="modern-cta px-6 py-3 rounded-full text-white font-bold text-sm" data-lang-key="nav-register">
+                        سجّل الآن
+                    </a>
+                    
+                    <!-- Language Switcher -->
+                    <div class="flex items-center gap-2 border-r-2 border-gray-300 pr-6">
+                        <button onclick="switchLanguage('ar')" id="lang-ar" class="lang-btn px-3 py-1.5 rounded-lg font-bold transition-all bg-[#0081FF] text-white">
+                            AR
+                        </button>
+                        <button onclick="switchLanguage('en')" id="lang-en" class="lang-btn px-3 py-1.5 rounded-lg font-bold transition-all text-gray-700 hover:bg-gray-100">
+                            EN
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-gray-700 focus:outline-none" onclick="toggleMobileMenu()">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu fixed top-0 right-0 w-full h-screen bg-white z-40 lg:hidden p-8">
+            <button onclick="toggleMobileMenu()" class="absolute top-6 right-6 text-gray-700">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div class="flex flex-col gap-6 mt-16 text-right">
+                <a href="#hero" onclick="toggleMobileMenu()" class="text-2xl font-bold text-gray-700" data-lang-key="nav-home">الرئيسية</a>
+                <a href="#features" onclick="toggleMobileMenu()" class="text-2xl font-bold text-gray-700" data-lang-key="nav-features">المميزات</a>
+                <a href="#journey" onclick="toggleMobileMenu()" class="text-2xl font-bold text-gray-700" data-lang-key="nav-journey">الرحلة</a>
+                <a href="#pricing" onclick="toggleMobileMenu()" class="text-2xl font-bold text-gray-700" data-lang-key="nav-pricing">الأسعار</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="modern-cta inline-block px-8 py-4 rounded-full text-gray-900 font-bold text-center mt-4" data-lang-key="nav-register">
+                    سجّل الآن
+                </a>
+                
+                <!-- Language Switcher -->
+                <div class="flex items-center gap-3 justify-center mt-8 pt-8 border-t border-gray-200">
+                    <button onclick="switchLanguage('ar')" id="lang-ar-mobile" class="lang-btn px-6 py-3 rounded-lg font-bold transition-all bg-[#0081FF] text-white text-xl">
+                        عربي
+                    </button>
+                    <button onclick="switchLanguage('en')" id="lang-en-mobile" class="lang-btn px-6 py-3 rounded-lg font-bold transition-all text-gray-700 bg-gray-100 text-xl">
+                        English
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/966920033025" target="_blank" class="whatsapp-float" aria-label="تواصل معنا عبر واتساب">
+        <svg width="40" height="40" fill="white" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Particles Background -->
+    <div id="particles" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section flex items-center justify-center pt-20">
+        <div class="container mx-auto px-6 text-center text-white hero-content py-24">
+            <div data-aos="fade-down" data-aos-duration="1000">
+                <div class="inline-block mb-6">
+                    <span class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full text-sm font-bold border border-white/30" data-lang-key="hero-badge">
+                        🌟 حصري بالتعاون مع جامعة أم القرى
+                    </span>
+                </div>
+            </div>
+            
+            <h1 id="hero-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="text-5xl md:text-7xl font-black mb-8 leading-tight">
+                تعلم اللغة العربية<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0081FF] via-[#0081FF] to-[#0081FF]">
+                    في مكة المكرمة
+                </span>
+            </h1>
+            
+            <p id="hero-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" class="text-xl md:text-3xl mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
+                رحلة تجمع بين العلم، والثقافة، والروحانية<br>
+                بشهادة معتمدة من جامعة أم القرى
+            </p>
+            
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" class="flex flex-wrap items-center justify-center gap-4">
+                <a href="#contact" class="modern-cta px-10 py-5 text-xl font-black text-gray-900 rounded-full inline-flex items-center gap-3">
+                    <span data-lang-key="hero-cta-register">سجّل الآن</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </a>
+                <a href="#features" class="bg-white/10 backdrop-blur-md border-2 border-white/30 px-10 py-5 text-xl font-black text-white rounded-full hover:bg-white/20 transition-all" data-lang-key="hero-cta-learn">
+                    اعرف المزيد
+                </a>
+            </div>
+            
+            <!-- Stats -->
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800" class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 max-w-4xl mx-auto stats-container">
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                    <div class="text-4xl font-black text-[#0081FF]">
+                        <span class="counter" data-target="28">0</span>+
+                    </div>
+                    <div class="text-sm mt-2 font-semibold" data-lang-key="stat-1">عام خبرة</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                    <div class="text-4xl font-black text-[#0081FF]">
+                        <span class="counter" data-target="240">0</span>
+                    </div>
+                    <div class="text-sm mt-2 font-semibold" data-lang-key="stat-2">ساعة تعليمية</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                    <div class="text-4xl font-black text-[#0081FF]">
+                        <span class="counter" data-target="6">0</span>
+                    </div>
+                    <div class="text-sm mt-2 font-semibold" data-lang-key="stat-3">مستويات دراسية</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                    <div class="text-4xl font-black text-[#0081FF]">
+                        <span class="counter" data-target="100">0</span>%
+                    </div>
+                    <div class="text-sm mt-2 font-semibold" data-lang-key="stat-4">شهادة معتمدة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="section-title" data-aos="fade-up" data-lang-key="features-title">لماذا تختار هذا البرنامج؟</h2>
+                <p class="text-2xl text-gray-700 mt-6 max-w-3xl mx-auto font-bold" data-aos="fade-up" data-aos-delay="200" data-lang-key="features-subtitle">
+                    نقدم لك تجربة تعليمية فريدة تجمع بين الأصالة والحداثة
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+                <!-- Feature 1 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#0081FF]" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 image-carousel" data-carousel="feature1">
+                        <div class="carousel-images">
+                            <div class="carousel-image">
+                                <img src="tagrba.jpg" alt="تجربة تعليمية عالمية 1" class="w-full h-full object-cover">
+                            </div>
+                            <div class="carousel-image">
+                                <img src="tagrba2.png" alt="تجربة تعليمية عالمية 2" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <button class="carousel-arrow next" onclick="moveCarousel('feature1', -1)">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"/>
+                            </svg>
+                        </button>
+                        <button class="carousel-arrow prev" onclick="moveCarousel('feature1', 1)">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active" onclick="goToSlide('feature1', 0)"></span>
+                            <span class="carousel-dot" onclick="goToSlide('feature1', 1)"></span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4 text-center" data-lang-key="feature-1-title">تجربة تعليمية عالمية</h3>
+                        <p class="text-gray-600 leading-relaxed text-lg text-center" data-lang-key="feature-1-desc">في أقدس بقاع الأرض حيث تلتقي الروحانية بالمعرفة</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#0081FF]" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 image-carousel" data-carousel="feature2">
+                        <div class="carousel-images">
+                            <div class="carousel-image">
+                                <img src="shehad.png" alt="شهادة معتمدة 1" class="w-full h-full object-cover">
+                            </div>
+                            <div class="carousel-image">
+                                <img src="shehada2.png" alt="شهادة معتمدة 2" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <button class="carousel-arrow next" onclick="moveCarousel('feature2', -1)">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"/>
+                            </svg>
+                        </button>
+                        <button class="carousel-arrow prev" onclick="moveCarousel('feature2', 1)">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <div class="carousel-dots">
+                            <span class="carousel-dot active" onclick="goToSlide('feature2', 0)"></span>
+                            <span class="carousel-dot" onclick="goToSlide('feature2', 1)"></span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4 text-center" data-lang-key="feature-2-title">شهادة معتمدة</h3>
+                        <p class="text-gray-600 leading-relaxed text-lg text-center" data-lang-key="feature-2-desc">من جامعة أم القرى المرموقة معترف بها عالمياً</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#0081FF]" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-64 image-carousel" data-carousel="feature3">
+                        <div class="carousel-images">
+                            <div class="carousel-image"><img src="tr.png" alt="تركيز على التواصل 1" class="w-full h-full object-cover"></div>
+                            <div class="carousel-image"><img src="mm.png" alt="تركيز على التواصل 2" class="w-full h-full object-cover"></div>
+                        </div>
+                        <button class="carousel-arrow next" onclick="moveCarousel('feature3', -1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"/></svg></button>
+                        <button class="carousel-arrow prev" onclick="moveCarousel('feature3', 1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg></button>
+                        <div class="carousel-dots"><span class="carousel-dot active" onclick="goToSlide('feature3', 0)"></span><span class="carousel-dot" onclick="goToSlide('feature3', 1)"></span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4 text-center" data-lang-key="feature-3-title">تركيز على التواصل</h3>
+                        <p class="text-gray-600 leading-relaxed text-lg text-center" data-lang-key="feature-3-desc">تطوير مهارات التواصل العملي في الحياة اليومية</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#0081FF]" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-64 image-carousel" data-carousel="feature4">
+                        <div class="carousel-images">
+                            <div class="carousel-image"><img src="taleam.jpg" alt="تعليم متكامل 1" class="w-full h-full object-cover"></div>
+                            <div class="carousel-image"><img src="taleam2.jpeg" alt="تعليم متكامل 2" class="w-full h-full object-cover"></div>
+                        </div>
+                        <button class="carousel-arrow next" onclick="moveCarousel('feature4', -1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"/></svg></button>
+                        <button class="carousel-arrow prev" onclick="moveCarousel('feature4', 1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg></button>
+                        <div class="carousel-dots"><span class="carousel-dot active" onclick="goToSlide('feature4', 0)"></span><span class="carousel-dot" onclick="goToSlide('feature4', 1)"></span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4 text-center" data-lang-key="feature-4-title">تعليم متكامل</h3>
+                        <p class="text-gray-600 leading-relaxed text-lg text-center" data-lang-key="feature-4-desc">دمج بين التعليم الحضوري والرقمي لأفضل النتائج</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#0081FF]" data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-64 image-carousel" data-carousel="feature5">
+                        <div class="carousel-images">
+                            <div class="carousel-image"><img src="eshraf.png" alt="إشراف أكاديمي 1" class="w-full h-full object-cover"></div>
+                            <div class="carousel-image"><img src="eshraf22.png" alt="إشراف أكاديمي 2" class="w-full h-full object-cover"></div>
+                        </div>
+                        <button class="carousel-arrow next" onclick="moveCarousel('feature5', -1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"/></svg></button>
+                        <button class="carousel-arrow prev" onclick="moveCarousel('feature5', 1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg></button>
+                        <div class="carousel-dots"><span class="carousel-dot active" onclick="goToSlide('feature5', 0)"></span><span class="carousel-dot" onclick="goToSlide('feature5', 1)"></span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4 text-center" data-lang-key="feature-5-title">إشراف أكاديمي</h3>
+                        <p class="text-gray-600 leading-relaxed text-lg text-center" data-lang-key="feature-5-desc">من نخبة الخبراء والأساتذة المتخصصين</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#0081FF]" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-64 image-carousel" data-carousel="feature6">
+                        <div class="carousel-images">
+                            <div class="carousel-image"><img src="shbra.jpg" alt="خبرة عريقة 1" class="w-full h-full object-cover"></div>
+                            <div class="carousel-image"><img src="shbra2.png" alt="خبرة عريقة 2" class="w-full h-full object-cover"></div>
+                        </div>
+                        <button class="carousel-arrow next" onclick="moveCarousel('feature6', -1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"/></svg></button>
+                        <button class="carousel-arrow prev" onclick="moveCarousel('feature6', 1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg></button>
+                        <div class="carousel-dots"><span class="carousel-dot active" onclick="goToSlide('feature6', 0)"></span><span class="carousel-dot" onclick="goToSlide('feature6', 1)"></span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4 text-center" data-lang-key="feature-6-title">خبرة عريقة</h3>
+                        <p class="text-gray-600 leading-relaxed text-lg text-center" data-lang-key="feature-6-desc">أكثر من 50 عاماً من التميز الأكاديمي والتعليمي</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="section-title" data-aos="fade-up" data-lang-key="journey-title">رحلة المتعلّم</h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200" data-lang-key="journey-subtitle">
+                    خطوة بخطوة نحو إتقان اللغة العربية
+                </p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto journey-timeline">
+                <div class="journey-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="journey-number">1</div>
+                    <div class="bg-gradient-to-br from-purple-50 to-white rounded-3xl p-8 shadow-lg">
+                        <h3 class="text-3xl font-black text-gray-800 mb-3" data-lang-key="journey-1-title">اختبار تحديد المستوى</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed" data-lang-key="journey-1-desc">نبدأ معك بتقييم شامل لمستواك الحالي لنضعك في المجموعة المناسبة تماماً لقدراتك</p>
+                    </div>
+                </div>
+                
+                <div class="journey-item" data-aos="fade-right" data-aos-delay="200">
+                    <div class="journey-number">2</div>
+                    <div class="bg-gradient-to-br rounded-3xl p-8 shadow-lg" style="background: linear-gradient(to bottom right, rgba(0, 69, 150, 0.1), white);">
+                        <h3 class="text-3xl font-black text-gray-800 mb-3" data-lang-key="journey-2-title">الانضمام إلى المجموعة التعليمية</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed" data-lang-key="journey-2-desc">ستنضم إلى مجموعة من المتعلمين المتحمسين من نفس مستواك من جميع أنحاء العالم</p>
+                    </div>
+                </div>
+                
+                <div class="journey-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="journey-number">3</div>
+                    <div class="bg-gradient-to-br from-pink-50 to-white rounded-3xl p-8 shadow-lg">
+                        <h3 class="text-3xl font-black text-gray-800 mb-3" data-lang-key="journey-3-title">أنشطة تمهيدية عبر المنصة</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed" data-lang-key="journey-3-desc">أنشطة تفاعلية وممتعة للتحضير قبل الدروس الحضورية وبناء المعرفة الأساسية</p>
+                    </div>
+                </div>
+                
+                <div class="journey-item" data-aos="fade-right" data-aos-delay="400">
+                    <div class="journey-number">4</div>
+                    <div class="bg-gradient-to-br from-green-50 to-white rounded-3xl p-8 shadow-lg">
+                        <h3 class="text-3xl font-black text-gray-800 mb-3" data-lang-key="journey-4-title">دروس حضورية وتطبيق عملي</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed" data-lang-key="journey-4-desc">دروس تفاعلية مباشرة مع أساتذة متخصصين في حرم جامعة أم القرى بمكة المكرمة</p>
+                    </div>
+                </div>
+                
+                <div class="journey-item" data-aos="fade-right" data-aos-delay="500">
+                    <div class="journey-number">5</div>
+                    <div class="bg-gradient-to-br rounded-3xl p-8 shadow-lg" style="background: linear-gradient(to bottom right, rgba(0, 69, 150, 0.1), white);">
+                        <h3 class="text-3xl font-black text-gray-800 mb-3" data-lang-key="journey-5-title">واجبات وأنشطة بعد الدروس</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed" data-lang-key="journey-5-desc">تعزيز المهارات من خلال الممارسة المستمرة والتطبيق العملي اليومي</p>
+                    </div>
+                </div>
+                
+                <div class="journey-item" data-aos="fade-right" data-aos-delay="600">
+                    <div class="journey-number">6</div>
+                    <div class="bg-gradient-to-br from-purple-50 to-white rounded-3xl p-8 shadow-lg">
+                        <h3 class="text-3xl font-black text-gray-800 mb-3" data-lang-key="journey-6-title">احصل على شهادتك المعتمدة</h3>
+                        <p class="text-gray-600 text-lg leading-relaxed" data-lang-key="journey-6-desc">بعد إتمام المستوى بنجاح، تحصل على شهادة معتمدة من جامعة أم القرى المرموقة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="section-title" data-aos="fade-up" data-lang-key="services-title">الخدمات الأساسية</h2>
+                <p class="text-xl text-gray-600 mt-6 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200" data-lang-key="services-subtitle">
+                    نوفر لك كل ما تحتاجه لتجربة تعليمية مريحة ومثمرة
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#0081FF]" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 image-carousel" data-carousel="service1">
+                        <div class="carousel-images">
+                            <div class="carousel-image"><img src="ekama.jpg" alt="الإقامة 1" class="w-full h-full object-cover"></div>
+                            <div class="carousel-image"><img src="ekama2.png" alt="الإقامة 2" class="w-full h-full object-cover"></div>
+                        </div>
+                        <button class="carousel-arrow next" onclick="moveCarousel('service1', -1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"/></svg></button>
+                        <button class="carousel-arrow prev" onclick="moveCarousel('service1', 1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg></button>
+                        <div class="carousel-dots"><span class="carousel-dot active" onclick="goToSlide('service1', 0)"></span><span class="carousel-dot" onclick="goToSlide('service1', 1)"></span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4 text-center" data-lang-key="service-1-title">الإقامة</h3>
+                        <p class="text-gray-600 text-center leading-relaxed text-lg" data-lang-key="service-1-desc">إقامة فاخرة في سكن مجهز بالكامل بالقرب من الحرم المكي</p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#0081FF]" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 image-carousel" data-carousel="service2">
+                        <div class="carousel-images">
+                            <div class="carousel-image"><img src="ww.png" alt="الوجبات 1" class="w-full h-full object-cover"></div>
+                            <div class="carousel-image"><img src="www.png" alt="الوجبات 2" class="w-full h-full object-cover"></div>
+                        </div>
+                        <button class="carousel-arrow next" onclick="moveCarousel('service2', -1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"/></svg></button>
+                        <button class="carousel-arrow prev" onclick="moveCarousel('service2', 1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg></button>
+                        <div class="carousel-dots"><span class="carousel-dot active" onclick="goToSlide('service2', 0)"></span><span class="carousel-dot" onclick="goToSlide('service2', 1)"></span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4 text-center" data-lang-key="service-2-title">الوجبات</h3>
+                        <p class="text-gray-600 text-center leading-relaxed text-lg" data-lang-key="service-2-desc">وجبتان يوميًا متنوعة ومغذية على طراز البوفيه المفتوح</p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#0081FF]" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-64 image-carousel" data-carousel="service3">
+                        <div class="carousel-images">
+                            <div class="carousel-image"><img src="nakl.jpg" alt="النقل 1" class="w-full h-full object-cover"></div>
+                            <div class="carousel-image"><img src="nakl2.png" alt="النقل 2" class="w-full h-full object-cover"></div>
+                        </div>
+                        <button class="carousel-arrow next" onclick="moveCarousel('service3', -1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"/></svg></button>
+                        <button class="carousel-arrow prev" onclick="moveCarousel('service3', 1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg></button>
+                        <div class="carousel-dots"><span class="carousel-dot active" onclick="goToSlide('service3', 0)"></span><span class="carousel-dot" onclick="goToSlide('service3', 1)"></span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4 text-center" data-lang-key="service-3-title">النقل</h3>
+                        <p class="text-gray-600 text-center leading-relaxed text-lg" data-lang-key="service-3-desc">خدمة نقل مريحة ومنظمة بين جميع المواقع طوال البرنامج</p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#0081FF]" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-64 image-carousel" data-carousel="service4">
+                        <div class="carousel-images">
+                            <div class="carousel-image"><img src="news_xaptudvbp6.jpg" alt="العمرة والزيارات 1" class="w-full h-full object-cover"></div>
+                            <div class="carousel-image"><img src="omra2.png" alt="العمرة والزيارات 2" class="w-full h-full object-cover"></div>
+                        </div>
+                        <button class="carousel-arrow next" onclick="moveCarousel('service4', -1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"/></svg></button>
+                        <button class="carousel-arrow prev" onclick="moveCarousel('service4', 1)"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg></button>
+                        <div class="carousel-dots"><span class="carousel-dot active" onclick="goToSlide('service4', 0)"></span><span class="carousel-dot" onclick="goToSlide('service4', 1)"></span></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-black text-gray-800 mb-4 text-center" data-lang-key="service-4-title">العمرة والزيارات</h3>
+                        <p class="text-gray-600 text-center leading-relaxed text-lg" data-lang-key="service-4-desc">جولات موجهة للمواقع المقدسة والتاريخية الإسلامية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="section-title" data-aos="fade-up" data-lang-key="pricing-title">الأسعار والخيارات</h2>
+                <p class="text-2xl text-gray-600 mt-8 max-w-3xl mx-auto font-semibold" data-aos="fade-up" data-aos-delay="200" data-lang-key="pricing-subtitle">
+                    اختر الباقة المناسبة لك ولمستواك التعليمي
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
+                <!-- Basic Package -->
+                <div class="flex flex-col bg-white border-2 border-gray-200 rounded-3xl p-8 hover:border-[#0081FF] transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Header -->
+                    <div class="text-center pb-8 border-b-2 border-gray-100">
+                        <div class="inline-block text-[#0081FF] px-6 py-2 rounded-full font-black text-sm mb-6" style="background: linear-gradient(to right, rgba(0, 69, 150, 0.15), rgba(0, 69, 150, 0.2));" data-lang-key="pricing-basic">
+                            الباقة الأساسية
+                        </div>
+                        <div class="mb-3">
+                            <span class="text-6xl font-black text-gray-900">$2300</span>
+                        </div>
+                        <div class="text-gray-600 font-bold text-lg"><span>4</span> <span data-lang-key="pricing-weeks">أسابيع</span></div>
+                    </div>
+                    
+                    <!-- Features -->
+                    <div class="flex-grow py-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-[#0081FF] rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 text-lg font-semibold"><span>80</span> <span data-lang-key="pricing-hours">ساعة تعليمية</span></span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-[#0081FF] rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 text-lg font-semibold" data-lang-key="pricing-level">مستويان دراسيان</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-[#0081FF] rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 text-lg font-semibold"><span>4</span> <span data-lang-key="pricing-trips">رحلات موجهة</span></span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-[#0081FF] rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 text-lg font-semibold"><span>20</span> <span data-lang-key="pricing-quran">حلقة قرآن</span></span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-[#0081FF] rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 text-lg font-semibold"><span>2</span> <span data-lang-key="pricing-islamic">جلسات دراسات إسلامية</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Button -->
+                    <div class="pt-6 border-t-2 border-gray-100">
+                        <a href="#contact" class="block text-center bg-white border-2 border-[#0081FF] text-[#0081FF] hover:bg-[#0081FF] hover:text-white py-4 px-6 rounded-xl font-black transition-all text-lg" data-lang-key="pricing-choose">
+                            اختر هذه الباقة
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Premium Package - Featured -->
+                <div class="flex flex-col bg-gradient-to-br from-[#0081FF] to-[#0066CC] border-4 border-white rounded-3xl p-8 relative shadow-2xl transform lg:scale-105" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Popular Badge -->
+                    <div class="absolute -top-5 right-1/2 transform translate-x-1/2">
+                        <div class="bg-gradient-to-r from-[#0066CC] to-[#0081FF] text-white px-8 py-3 rounded-full font-black text-base shadow-xl whitespace-nowrap border-2 border-white">
+                            <span data-lang-key="pricing-most-popular">⭐ الأكثر شعبية</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Header -->
+                    <div class="text-center pb-8 border-b-2 border-white/30 pt-4">
+                        <div class="text-white/80 text-xs font-bold mb-2 tracking-wider" style="letter-spacing: 1px;">
+                            Exclusive Package from Fanadiqi MyHotels.SA
+                        </div>
+                        <div class="text-white/80 text-xs font-bold mb-2 tracking-wider" style="letter-spacing: 1px;" data-lang-key="exclusive-package-ar">
+                            باقة حصرية من فنادقي MyHotels.SA
+                        </div>
+                        <div class="inline-block bg-white/30 backdrop-blur-sm px-6 py-2 rounded-full font-black text-sm mb-6 text-white border-2 border-white/50" data-lang-key="pricing-advanced">
+                            الباقة المتقدمة
+                        </div>
+                        <div class="mb-3">
+                            <span class="text-6xl font-black text-white drop-shadow-lg">$5200</span>
+                        </div>
+                        <div class="text-white font-bold text-lg"><span>8</span> <span data-lang-key="pricing-weeks">أسابيع</span></div>
+                    </div>
+                    
+                    <!-- Features -->
+                    <div class="flex-grow py-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                                    <svg class="w-3.5 h-3.5 text-[#0081FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-white text-lg font-semibold"><span>160</span> <span data-lang-key="pricing-hours">ساعة تعليمية</span></span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                                    <svg class="w-3.5 h-3.5 text-[#0081FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-white text-lg font-semibold"><span>4</span> <span data-lang-key="pricing-levels">مستويات دراسية</span></span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                                    <svg class="w-3.5 h-3.5 text-[#0081FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-white text-lg font-semibold"><span>8</span> <span data-lang-key="pricing-trips">رحلات موجهة</span></span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                                    <svg class="w-3.5 h-3.5 text-[#0081FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-white text-lg font-semibold"><span>40</span> <span data-lang-key="pricing-quran">حلقة قرآن</span></span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                                    <svg class="w-3.5 h-3.5 text-[#0081FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-white text-lg font-semibold"><span>4</span> <span data-lang-key="pricing-islamic">جلسات دراسات إسلامية</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Button -->
+                    <div class="pt-6 border-t-2 border-white/30">
+                        <a href="#contact" class="block text-center bg-white text-[#0081FF] py-4 px-6 rounded-xl font-black transition-all text-lg hover:bg-gray-100 hover:shadow-2xl border-2 border-white shadow-lg" data-lang-key="pricing-choose">
+                            اختر هذه الباقة
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Premium Plus Package -->
+                <div class="flex flex-col bg-white border-2 border-gray-200 rounded-3xl p-8 hover:border-[#0081FF] transition-all duration-300 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="300">
+                    <!-- Header -->
+                    <div class="text-center pb-8 border-b-2 border-gray-100">
+                        <div class="inline-block text-[#0081FF] px-6 py-2 rounded-full font-black text-sm mb-6" style="background: linear-gradient(to right, rgba(0, 69, 150, 0.15), rgba(0, 69, 150, 0.2));" data-lang-key="pricing-comprehensive">
+                            الباقة الشاملة
+                        </div>
+                        <div class="mb-3">
+                            <span class="text-6xl font-black text-gray-900">$7800</span>
+                        </div>
+                        <div class="text-gray-600 font-bold text-lg"><span>12</span> <span data-lang-key="pricing-weeks">أسبوعًا</span></div>
+                    </div>
+                    
+                    <!-- Features -->
+                    <div class="flex-grow py-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-[#0081FF] rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 text-lg font-semibold"><span>240</span> <span data-lang-key="pricing-hours">ساعة تعليمية</span></span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-[#0081FF] rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 text-lg font-semibold"><span>6</span> <span data-lang-key="pricing-levels">مستويات دراسية</span></span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-[#0081FF] rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 text-lg font-semibold"><span>12</span> <span data-lang-key="pricing-trip">رحلة موجهة</span></span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-[#0081FF] rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 text-lg font-semibold"><span>60</span> <span data-lang-key="pricing-quran">حلقة قرآن</span></span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-6 h-6 bg-[#0081FF] rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 text-lg font-semibold"><span>12</span> <span data-lang-key="pricing-islamic-session">جلسة دراسات إسلامية</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Button -->
+                    <div class="pt-6 border-t-2 border-gray-100">
+                        <a href="#contact" class="block text-center bg-white border-2 border-[#0081FF] text-[#0081FF] hover:bg-[#0081FF] hover:text-white py-4 px-6 rounded-xl font-black transition-all text-lg" data-lang-key="pricing-choose">
+                            اختر هذه الباقة
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pricing Note -->
+            <div class="text-center max-w-3xl mx-auto mt-12" data-aos="fade-up" data-aos-delay="400">
+                <div class="border-r-4 border-[#0081FF] p-6 rounded-xl shadow-md" style="background: linear-gradient(to right, rgba(0, 69, 150, 0.1), rgba(0, 69, 150, 0.15));">
+                    <p class="text-gray-700 text-base leading-relaxed">
+                        <span class="font-bold text-gray-800" data-lang-key="pricing-note">💡 ملاحظة:</span> 
+                        <span data-lang-key="pricing-note-text">الأسعار لا تشمل تذاكر السفر وتأشيرة العمرة</span> 
+                        <span class="text-[#0081FF] font-bold" data-lang-key="pricing-student">(120$ لكل طالب)</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivational Section -->
+    <section class="motivation-section py-32 text-white text-center relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-5xl mx-auto" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="motivation-star text-8xl mb-10">🌟</div>
+                <h2 id="motivation-quote" class="text-4xl md:text-6xl font-black mb-10 leading-tight">
+                    <span data-lang-key="motivation-quote">"لنجعل اللغة العربية لغة العالم!"</span>
+                </h2>
+                <p id="motivation-text" class="text-xl md:text-3xl leading-relaxed font-medium">
+                    <span data-lang-key="motivation-text">مع وكالة الأهرام للسفر والسياحة، لا تتعلّم العربية فقط،</span><br>
+                    <span data-lang-key="motivation-text2">بل تعيشها بكل تفاصيلها في مكة المكرمة</span><br>
+                    <span class="text-[#87CEEB] font-black drop-shadow-lg" data-lang-key="motivation-highlight">حيث تلتقي المعرفة بالإيمان والثقافة</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="section-title" data-aos="fade-up" data-lang-key="contact-title">تواصل معنا</h2>
+                <p class="text-2xl text-gray-700 mt-6 font-bold max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200" data-lang-key="contact-subtitle">
+                    نحن هنا لخدمتك! تواصل معنا الآن للاستفسار أو للتسجيل في البرنامج
+                </p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+                <!-- Phone Card -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-[#0081FF]" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-[#0081FF] to-[#0081FF] rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-md">
+                            📞
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-600 mb-4" data-lang-key="contact-phone">الهاتف</h3>
+                        <a href="tel:+966920033025" class="text-2xl font-black text-[#0081FF] hover:text-[#0081FF] transition block mb-6" dir="ltr">
+                            +966920033025
+                        </a>
+                        <a href="tel:+966920033025" class="block bg-gradient-to-r from-[#0081FF] to-[#0081FF] text-white py-3 px-6 rounded-xl font-bold hover:shadow-xl transition" data-lang-key="contact-call">
+                            اتصل الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Email Card -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-[#0081FF]" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-[#0081FF] to-[#0081FF] rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-md">
+                            📧
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-600 mb-4" data-lang-key="contact-email">البريد الإلكتروني</h3>
+                        <a href="mailto:CC@MyHotels.SA" class="text-2xl font-black text-[#0081FF] hover:text-[#0081FF] transition block mb-6 break-all">
+                            CC@MyHotels.SA
+                        </a>
+                        <a href="mailto:CC@MyHotels.SA?subject=استفسار عن برنامج تعلم اللغة العربية&body=السلام عليكم،%0D%0A%0D%0Aأود الاستفسار عن برنامج تعلم اللغة العربية في مكة المكرمة.%0D%0A%0D%0Aشكراً" class="block bg-gradient-to-r from-[#0081FF] to-[#0081FF] text-white py-3 px-6 rounded-xl font-bold hover:shadow-xl transition" data-lang-key="contact-email-btn">
+                            راسلنا الآن
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Location Card -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-[#0081FF]" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-[#0081FF] to-[#0081FF] rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 shadow-md">
+                            📍
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-600 mb-4" data-lang-key="contact-location">الموقع</h3>
+                        <div class="text-2xl font-black text-[#0081FF] mb-6" data-lang-key="contact-location-text">
+                            المملكة العربية السعودية
+                        </div>
+                        <button class="block w-full bg-gradient-to-r from-[#0081FF] to-[#0081FF] text-white py-3 px-6 rounded-xl font-bold hover:shadow-xl transition cursor-default" data-lang-key="contact-location-btn">
+                            الموقع
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-gradient text-white py-16">
+        <div class="container mx-auto px-6">
+            <!-- Top Section -->
+            <div class="mb-12" id="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col-1">
+                    <img src="logo.png" alt="MyHotels.SA" class="h-16 w-auto mb-6">
+                    <p class="text-white/90 leading-relaxed text-sm mb-6" data-lang-key="footer-description">
+                        برامج تعليم اللغة العربية بالتعاون مع جامعة أم القرى في مكة المكرمة
+                    </p>
+                    
+                    <!-- MyHotels.SA Website Link -->
+                    <div class="mb-6">
+                        <a href="https://www.myhotels.sa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 hover:scale-105 text-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                            </svg>
+                            <span class="font-semibold" data-lang-key="company-name">MyHotels.SA</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Social Media Links -->
+                    <div>
+                        <h4 class="text-sm font-bold text-white/80 mb-3" data-lang-key="footer-social">تابعنا على</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://facebook.com/MyHotelsSA" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-white/10 hover:bg-[#1877F2] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                            <a href="https://instagram.com/MyHotelsSA" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-white/10 hover:bg-gradient-to-r hover:from-[#E1306C] hover:to-[#F77737] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/MyHotelsSA" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-white/10 hover:bg-[#1DA1F2] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                            <a href="https://youtube.com/MyHotelsSA" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-white/10 hover:bg-[#FF0000] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/company/MyHotelsSA" target="_blank" rel="noopener noreferrer" class="w-9 h-9 bg-white/10 hover:bg-[#0077B5] rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-col-2">
+                    <h3 class="text-xl font-black mb-6 text-white" data-lang-key="footer-links">روابط سريعة</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#hero" class="text-white/80 hover:text-white hover:translate-x-[-5px] transition-all duration-300 flex items-center gap-2 text-sm group">
+                                <span data-lang-key="nav-home">الرئيسية</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#features" class="text-white/80 hover:text-white hover:translate-x-[-5px] transition-all duration-300 flex items-center gap-2 text-sm group">
+                                <span data-lang-key="nav-features">المميزات</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#journey" class="text-white/80 hover:text-white hover:translate-x-[-5px] transition-all duration-300 flex items-center gap-2 text-sm group">
+                                <span data-lang-key="nav-journey">رحلة المتعلم</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#pricing" class="text-white/80 hover:text-white hover:translate-x-[-5px] transition-all duration-300 flex items-center gap-2 text-sm group">
+                                <span data-lang-key="nav-pricing">الأسعار</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="text-white/80 hover:text-white hover:translate-x-[-5px] transition-all duration-300 flex items-center gap-2 text-sm group">
+                                <span data-lang-key="contact-title">تواصل معنا</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Our Other Pages -->
+                <div class="footer-col-3">
+                    <h3 class="text-xl font-black mb-6 text-white" data-lang-key="footer-other-pages">صفحاتنا الأخرى</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="../disney1/index.html" class="text-white/80 hover:text-white hover:translate-x-[-5px] transition-all duration-300 flex items-center gap-2 text-sm group">
+                                <span data-lang-key="nav-disney">ديزني لاند باريس</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../index.html" class="text-white/80 hover:text-white hover:translate-x-[-5px] transition-all duration-300 flex items-center gap-2 text-sm group">
+                                <span data-lang-key="nav-yas">جزيرة ياس</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../omrahvip2/index.html" class="text-white/80 hover:text-white hover:translate-x-[-5px] transition-all duration-300 flex items-center gap-2 text-sm group">
+                                <span data-lang-key="nav-umrah">عمرة VVIP</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-col-4">
+                    <h3 class="text-xl font-black mb-6 text-white" data-lang-key="footer-contact">تواصل معنا</h3>
+                    <ul class="space-y-4 mb-6">
+                        <li class="flex items-start gap-3 text-white">
+                            <span class="text-white/80 text-lg flex-shrink-0">📞</span>
+                            <div>
+                                <a href="tel:+966920033025" class="text-white/80 hover:text-white transition-colors duration-300 text-sm" dir="ltr">
+                                    +966920033025
+                                </a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 text-white">
+                            <span class="text-white/80 text-lg flex-shrink-0">📧</span>
+                            <div>
+                                <a href="mailto:CC@MyHotels.SA" class="text-white/80 hover:text-white transition-colors duration-300 break-all text-sm">
+                                    CC@MyHotels.SA
+                                </a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 text-white">
+                            <span class="text-white/80 text-lg flex-shrink-0">📍</span>
+                            <div class="text-sm text-white/80" data-lang-key="contact-location-text">المملكة العربية السعودية</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Mobile Apps -->
+                <div class="footer-col-5">
+                    <h3 class="text-xl font-black mb-6 text-white" data-lang-key="footer-apps">تطبيقات فنادقي MyHotels</h3>
+                    <div class="space-y-3">
+                        <a href="https://apps.apple.com/sa/app/myhotels-sa/id1457961680" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 hover:scale-105 hover:shadow-lg">
+                            <svg class="w-7 h-7 flex-shrink-0 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                            </svg>
+                            <div>
+                                <div class="text-xs text-white/70" data-lang-key="footer-download">تحميل من</div>
+                                <div class="font-bold text-white text-sm">App Store</div>
+                            </div>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.genx.myhotels&hl=en" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 hover:scale-105 hover:shadow-lg">
+                            <svg class="w-7 h-7 flex-shrink-0 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                            </svg>
+                            <div>
+                                <div class="text-xs text-white/70" data-lang-key="footer-download">تحميل من</div>
+                                <div class="font-bold text-white text-sm">Google Play</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Divider -->
+            <div class="border-t border-white/20 my-8"></div>
+            
+            <!-- Bottom Section -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <!-- Copyright -->
+                <div class="text-center">
+                    <p id="footer-copyright" class="text-white text-lg font-bold" data-lang-key="footer-copyright-name">
+                        MyHotels.SA
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Header Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+        
+        // Create Floating Particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        createParticles();
+        
+        // Counter Animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const step = target / (duration / 16); // 60fps
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+        
+        // Trigger counter animation when stats are visible
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+        
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.counter');
+                    counters.forEach(counter => {
+                        if (!counter.classList.contains('animated')) {
+                            counter.classList.add('animated');
+                            animateCounter(counter);
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+        
+        // Observe stats container
+        const statsContainer = document.querySelector('.stats-container');
+        if (statsContainer) {
+            statsObserver.observe(statsContainer);
+        }
+        
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Image Carousel Functions
+        const carousels = {};
+        
+        function initCarousels() {
+            document.querySelectorAll('[data-carousel]').forEach(carousel => {
+                const id = carousel.getAttribute('data-carousel');
+                carousels[id] = {
+                    element: carousel,
+                    currentSlide: 0,
+                    totalSlides: carousel.querySelectorAll('.carousel-image').length
+                };
+                
+                // Auto-play carousel
+                if (carousels[id].totalSlides > 1) {
+                    setInterval(() => {
+                        moveCarousel(id, 1);
+                    }, 4000);
+                }
+            });
+        }
+        
+        function moveCarousel(carouselId, direction) {
+            const carousel = carousels[carouselId];
+            if (!carousel) return;
+            
+            carousel.currentSlide = (carousel.currentSlide + direction + carousel.totalSlides) % carousel.totalSlides;
+            updateCarousel(carouselId);
+        }
+        
+        function goToSlide(carouselId, slideIndex) {
+            const carousel = carousels[carouselId];
+            if (!carousel) return;
+            
+            carousel.currentSlide = slideIndex;
+            updateCarousel(carouselId);
+        }
+        
+        function updateCarousel(carouselId) {
+            const carousel = carousels[carouselId];
+            if (!carousel) return;
+            
+            const imagesContainer = carousel.element.querySelector('.carousel-images');
+            const dots = carousel.element.querySelectorAll('.carousel-dot');
+            
+            // Get current language direction
+            const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+            const direction = isRTL ? 1 : -1;
+            
+            imagesContainer.style.transform = `translateX(${direction * carousel.currentSlide * 100}%)`;
+            
+            dots.forEach((dot, index) => {
+                if (index === carousel.currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+        
+        // Initialize carousels when page loads
+        window.addEventListener('load', initCarousels);
+        
+        // ============================================
+        // Language Switcher System
+        // ============================================
+        
+        const translations = {
+            ar: {
+                // Navigation
+                'nav-home': 'الرئيسية',
+                'nav-features': 'المميزات',
+                'nav-journey': 'الرحلة',
+                'nav-pricing': 'الأسعار',
+                'nav-register': 'سجّل الآن',
+                
+                // Hero Section
+                'hero-badge': '🌟 حصري بالتعاون مع جامعة أم القرى',
+                'hero-cta-register': 'سجّل الآن',
+                'hero-cta-learn': 'اعرف المزيد',
+                
+                // Stats
+                'stat-1': 'عام خبرة',
+                'stat-2': 'ساعة تعليمية',
+                'stat-3': 'مستويات دراسية',
+                'stat-4': 'شهادة معتمدة',
+                
+                // Features Section
+                'features-title': 'لماذا تختار هذا البرنامج؟',
+                'features-subtitle': 'نقدم لك تجربة تعليمية فريدة تجمع بين الأصالة والحداثة',
+                'feature-1-title': 'تجربة تعليمية عالمية',
+                'feature-1-desc': 'في أقدس بقاع الأرض حيث تلتقي الروحانية بالمعرفة',
+                'feature-2-title': 'شهادة معتمدة',
+                'feature-2-desc': 'من جامعة أم القرى المرموقة معترف بها عالمياً',
+                'feature-3-title': 'تركيز على التواصل',
+                'feature-3-desc': 'تطوير مهارات التواصل العملي في الحياة اليومية',
+                'feature-4-title': 'تعليم متكامل',
+                'feature-4-desc': 'دمج بين التعليم الحضوري والرقمي لأفضل النتائج',
+                'feature-5-title': 'إشراف أكاديمي',
+                'feature-5-desc': 'من نخبة الخبراء والأساتذة المتخصصين',
+                'feature-6-title': 'خبرة عريقة',
+                'feature-6-desc': 'أكثر من 50 عاماً من التميز الأكاديمي والتعليمي',
+                
+                // Services Section
+                'services-title': 'الخدمات الأساسية',
+                'services-subtitle': 'نوفر لك كل ما تحتاجه لتجربة تعليمية مريحة ومثمرة',
+                'service-1-title': 'الإقامة',
+                'service-1-desc': 'إقامة فاخرة في سكن مجهز بالكامل بالقرب من الحرم المكي',
+                'service-2-title': 'الوجبات',
+                'service-2-desc': 'وجبتان يوميًا متنوعة ومغذية على طراز البوفيه المفتوح',
+                'service-3-title': 'النقل',
+                'service-3-desc': 'خدمة نقل مريحة ومنظمة بين جميع المواقع طوال البرنامج',
+                'service-4-title': 'العمرة والزيارات',
+                'service-4-desc': 'جولات موجهة للمواقع المقدسة والتاريخية الإسلامية',
+                
+                // Journey Section
+                'journey-title': 'رحلة المتعلم',
+                'journey-subtitle': 'خطوة بخطوة نحو إتقان اللغة العربية',
+                'journey-1-title': 'اختبار تحديد المستوى',
+                'journey-1-desc': 'نبدأ معك بتقييم شامل لمستواك الحالي لنضعك في المجموعة المناسبة تماماً لقدراتك',
+                'journey-2-title': 'الانضمام إلى المجموعة التعليمية',
+                'journey-2-desc': 'ستنضم إلى مجموعة من المتعلمين المتحمسين من نفس مستواك من جميع أنحاء العالم',
+                'journey-3-title': 'أنشطة تمهيدية عبر المنصة',
+                'journey-3-desc': 'أنشطة تفاعلية وممتعة للتحضير قبل الدروس الحضورية وبناء المعرفة الأساسية',
+                'journey-4-title': 'دروس حضورية وتطبيق عملي',
+                'journey-4-desc': 'دروس تفاعلية مباشرة مع أساتذة متخصصين في حرم جامعة أم القرى بمكة المكرمة',
+                'journey-5-title': 'واجبات وأنشطة بعد الدروس',
+                'journey-5-desc': 'تعزيز المهارات من خلال الممارسة المستمرة والتطبيق العملي اليومي',
+                'journey-6-title': 'احصل على شهادتك المعتمدة',
+                'journey-6-desc': 'بعد إتمام المستوى بنجاح، تحصل على شهادة معتمدة من جامعة أم القرى المرموقة',
+                
+                // Pricing Section
+                'pricing-title': 'الأسعار والخيارات',
+                'pricing-subtitle': 'اختر الباقة المناسبة لك ولمستواك التعليمي',
+                'pricing-basic': 'الباقة الأساسية',
+                'pricing-advanced': 'الباقة المتقدمة',
+                'pricing-comprehensive': 'الباقة الشاملة',
+                'pricing-most-popular': 'الأكثر شعبية',
+                'pricing-weeks': 'أسابيع',
+                'pricing-choose': 'اختر هذه الباقة',
+                'pricing-note': '💡 ملاحظة:',
+                'pricing-note-text': 'الأسعار لا تشمل تذاكر السفر وتأشيرة العمرة',
+                'pricing-student': '(120$ لكل طالب)',
+                'pricing-hours': 'ساعة تعليمية',
+                'pricing-levels': 'مستويات دراسية',
+                'pricing-level': 'مستويان دراسيان',
+                'pricing-trips': 'رحلات موجهة',
+                'pricing-trip': 'رحلة موجهة',
+                'pricing-quran': 'حلقة قرآن',
+                'pricing-islamic': 'جلسات دراسات إسلامية',
+                'pricing-islamic-session': 'جلسة دراسات إسلامية',
+                
+                // Motivation Section
+                'motivation-quote': '"لنجعل اللغة العربية لغة العالم!"',
+                'motivation-text': 'مع وكالة الأهرام للسفر والسياحة، لا تتعلّم العربية فقط،',
+                'motivation-text2': 'بل تعيشها بكل تفاصيلها في مكة المكرمة',
+                'motivation-highlight': 'حيث تلتقي المعرفة بالإيمان والثقافة',
+                
+                // Contact Section
+                'contact-title': 'تواصل معنا',
+                'contact-subtitle': 'نحن هنا لخدمتك! تواصل معنا الآن للاستفسار أو للتسجيل في البرنامج',
+                'contact-phone': 'الهاتف',
+                'contact-email': 'البريد الإلكتروني',
+                'contact-location': 'الموقع',
+                'contact-call': 'اتصل الآن',
+                'contact-email-btn': 'راسلنا الآن',
+                'contact-location-text': 'المملكة العربية السعودية',
+                'contact-location-btn': 'الموقع',
+                
+                // Footer
+                'footer-company': 'وكالة الأهرام للسفر والسياحة',
+                'footer-description': 'برامج تعليم اللغة العربية بالتعاون مع جامعة أم القرى في مكة المكرمة',
+                'footer-social': 'تابعنا على',
+                'footer-links': 'روابط سريعة',
+                'footer-other-pages': 'صفحاتنا الأخرى',
+                'footer-contact': 'تواصل معنا',
+                'footer-apps': 'تطبيقات فنادقي MyHotels',
+                'exclusive-package-ar': 'باقة حصرية من فنادقي MyHotels.SA',
+                'company-name': 'فنادقي MyHotels.SA',
+                'footer-copyright-name': 'فنادقي MyHotels.SA',
+                'footer-download': 'تحميل من',
+                'footer-copyright': '© 2025',
+                'footer-rights': '- جميع الحقوق محفوظة',
+                'nav-disney': 'ديزني لاند باريس',
+                'nav-yas': 'جزيرة ياس',
+                'nav-umrah': 'عمرة VVIP'
+            },
+            en: {
+                // Navigation
+                'nav-home': 'Home',
+                'nav-features': 'Features',
+                'nav-journey': 'Journey',
+                'nav-pricing': 'Pricing',
+                'nav-register': 'Register Now',
+                
+                // Hero Section
+                'hero-badge': '🌟 Exclusive Collaboration with Umm Al-Qura University',
+                'hero-cta-register': 'Register Now',
+                'hero-cta-learn': 'Learn More',
+                
+                // Stats
+                'stat-1': 'Years of Experience',
+                'stat-2': 'Teaching Hours',
+                'stat-3': 'Study Levels',
+                'stat-4': 'Accredited Certificate',
+                
+                // Features Section
+                'features-title': 'Why Choose This Program?',
+                'features-subtitle': 'We offer you a unique learning experience that combines authenticity and modernity',
+                'feature-1-title': 'Global Learning Experience',
+                'feature-1-desc': 'In the holiest place on Earth where spirituality meets knowledge',
+                'feature-2-title': 'Accredited Certificate',
+                'feature-2-desc': 'From the prestigious Umm Al-Qura University, internationally recognized',
+                'feature-3-title': 'Communication Focus',
+                'feature-3-desc': 'Developing practical communication skills for daily life',
+                'feature-4-title': 'Integrated Education',
+                'feature-4-desc': 'Combining in-person and digital learning for the best results',
+                'feature-5-title': 'Academic Supervision',
+                'feature-5-desc': 'By elite experts and specialized professors',
+                'feature-6-title': 'Extensive Experience',
+                'feature-6-desc': 'More than 50 years of academic and educational excellence',
+                
+                // Services Section
+                'services-title': 'Essential Services',
+                'services-subtitle': 'We provide everything you need for a comfortable and fruitful learning experience',
+                'service-1-title': 'Accommodation',
+                'service-1-desc': 'Luxurious accommodation in fully equipped housing near the Holy Mosque',
+                'service-2-title': 'Meals',
+                'service-2-desc': 'Two daily varied and nutritious meals in buffet style',
+                'service-3-title': 'Transportation',
+                'service-3-desc': 'Comfortable and organized transportation service between all locations throughout the program',
+                'service-4-title': 'Umrah & Visits',
+                'service-4-desc': 'Guided tours to Islamic holy and historical sites',
+                
+                // Journey Section
+                'journey-title': 'The Learner\'s Journey',
+                'journey-subtitle': 'Step by step towards mastering the Arabic language',
+                'journey-1-title': 'Placement Test',
+                'journey-1-desc': 'We start with a comprehensive assessment of your current level to place you in the group that perfectly matches your abilities',
+                'journey-2-title': 'Join the Learning Group',
+                'journey-2-desc': 'You\'ll join a group of enthusiastic learners of the same level from around the world',
+                'journey-3-title': 'Preparatory Activities on the Platform',
+                'journey-3-desc': 'Interactive and fun activities to prepare before in-person classes and build foundational knowledge',
+                'journey-4-title': 'In-Person Lessons and Practical Application',
+                'journey-4-desc': 'Interactive direct lessons with specialized professors at Umm Al-Qura University campus in Makkah',
+                'journey-5-title': 'Homework and Post-Class Activities',
+                'journey-5-desc': 'Reinforcing skills through continuous practice and daily practical application',
+                'journey-6-title': 'Get Your Accredited Certificate',
+                'journey-6-desc': 'After successfully completing the level, you receive an accredited certificate from the prestigious Umm Al-Qura University',
+                
+                // Pricing Section
+                'pricing-title': 'Pricing & Packages',
+                'pricing-subtitle': 'Choose the package that suits you and your educational level',
+                'pricing-basic': 'Basic Package',
+                'pricing-advanced': 'Advanced Package',
+                'pricing-comprehensive': 'Comprehensive Package',
+                'pricing-most-popular': 'Most Popular',
+                'pricing-weeks': 'weeks',
+                'pricing-choose': 'Choose This Package',
+                'pricing-note': '💡 Note:',
+                'pricing-note-text': 'Prices do not include flight tickets and Umrah visa',
+                'pricing-student': '($120 per student)',
+                'pricing-hours': 'teaching hours',
+                'pricing-levels': 'study levels',
+                'pricing-level': 'two study levels',
+                'pricing-trips': 'guided trips',
+                'pricing-trip': 'guided trip',
+                'pricing-quran': 'Quran sessions',
+                'pricing-islamic': 'Islamic studies sessions',
+                'pricing-islamic-session': 'Islamic studies session',
+                
+                // Motivation Section
+                'motivation-quote': '"Let\'s make Arabic the language of the world!"',
+                'motivation-text': 'With Al-Ahram Travel & Tourism Agency, you don\'t just learn Arabic,',
+                'motivation-text2': 'but you experience it in all its details in the Holy City of Makkah',
+                'motivation-highlight': 'where knowledge meets faith and culture',
+                
+                // Contact Section
+                'contact-title': 'Contact Us',
+                'contact-subtitle': 'We are here to serve you! Contact us now for inquiries or to register for the program',
+                'contact-phone': 'Phone',
+                'contact-email': 'Email',
+                'contact-location': 'Location',
+                'contact-call': 'Call Now',
+                'contact-email-btn': 'Email Us Now',
+                'contact-location-text': 'Kingdom of Saudi Arabia',
+                'contact-location-btn': 'Location',
+                
+                // Footer
+                'footer-company': 'Al-Ahram Travel & Tourism Agency',
+                'footer-description': 'Leader in providing Arabic language education programs in collaboration with Umm Al-Qura University in Makkah',
+                'footer-social': 'Follow Us',
+                'footer-links': 'Quick Links',
+                'footer-other-pages': 'Our Other Pages',
+                'footer-contact': 'Contact Us',
+                'footer-apps': 'Fanadiqi MyHotels Apps',
+                'company-name': 'Fanadiqi MyHotels.SA',
+                'footer-copyright-name': 'Fanadiqi MyHotels.SA',
+                'footer-download': 'Download from',
+                'footer-copyright': '© 2025',
+                'footer-rights': '- All Rights Reserved',
+                'nav-disney': 'Disneyland Paris',
+                'nav-yas': 'Yas Island',
+                'nav-umrah': 'Umrah VVIP'
+            }
+        };
+        
+        // Current language (default: Arabic)
+        let currentLang = localStorage.getItem('preferred-language') || 'ar';
+        
+        // Switch language function
+        function switchLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferred-language', lang);
+            
+            // Update HTML attributes
+            document.documentElement.setAttribute('lang', lang);
+            document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            
+            // Update all elements with data-lang-key
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                    // Set text direction for each element
+                    element.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+                }
+            });
+            
+            // Update language buttons
+            updateLanguageButtons(lang);
+            
+            // Update specific elements with complex structure (need to preserve HTML)
+            updateComplexElements(lang);
+        }
+        
+        // Update language button styles
+        function updateLanguageButtons(lang) {
+            // Desktop buttons
+            const arBtn = document.getElementById('lang-ar');
+            const enBtn = document.getElementById('lang-en');
+            
+            if (lang === 'ar') {
+                arBtn.classList.add('bg-[#0081FF]', 'text-white');
+                arBtn.classList.remove('text-gray-700', 'hover:bg-gray-100');
+                enBtn.classList.remove('bg-[#0081FF]', 'text-white');
+                enBtn.classList.add('text-gray-700', 'hover:bg-gray-100');
+            } else {
+                enBtn.classList.add('bg-[#0081FF]', 'text-white');
+                enBtn.classList.remove('text-gray-700', 'hover:bg-gray-100');
+                arBtn.classList.remove('bg-[#0081FF]', 'text-white');
+                arBtn.classList.add('text-gray-700', 'hover:bg-gray-100');
+            }
+            
+            // Mobile buttons
+            const arBtnMobile = document.getElementById('lang-ar-mobile');
+            const enBtnMobile = document.getElementById('lang-en-mobile');
+            
+            if (lang === 'ar') {
+                arBtnMobile.classList.add('bg-[#0081FF]', 'text-white');
+                arBtnMobile.classList.remove('bg-gray-100', 'text-gray-700');
+                enBtnMobile.classList.remove('bg-[#0081FF]', 'text-white');
+                enBtnMobile.classList.add('bg-gray-100', 'text-gray-700');
+            } else {
+                enBtnMobile.classList.add('bg-[#0081FF]', 'text-white');
+                enBtnMobile.classList.remove('bg-gray-100', 'text-gray-700');
+                arBtnMobile.classList.remove('bg-[#0081FF]', 'text-white');
+                arBtnMobile.classList.add('bg-gray-100', 'text-gray-700');
+            }
+        }
+        
+        // Update complex elements that need special handling
+        function updateComplexElements(lang) {
+            const direction = lang === 'ar' ? 'rtl' : 'ltr';
+            const arrow = lang === 'ar' ? '←' : '→';
+            
+            // Hero Title
+            const heroTitle = document.getElementById('hero-title');
+            if (heroTitle) {
+                heroTitle.setAttribute('dir', direction);
+                if (lang === 'ar') {
+                    heroTitle.innerHTML = `تعلم اللغة العربية<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0081FF] via-[#0081FF] to-[#0081FF]">
+                            في مكة المكرمة
+                        </span>`;
+                } else {
+                    heroTitle.innerHTML = `Learn Arabic Language<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#0081FF] via-[#0081FF] to-[#0081FF]">
+                            in the Holy City of Makkah
+                        </span>`;
+                }
+            }
+            
+            // Hero Subtitle
+            const heroSubtitle = document.getElementById('hero-subtitle');
+            if (heroSubtitle) {
+                heroSubtitle.setAttribute('dir', direction);
+                if (lang === 'ar') {
+                    heroSubtitle.innerHTML = `رحلة تجمع بين العلم، والثقافة، والروحانية<br>
+                        بشهادة معتمدة من جامعة أم القرى`;
+                } else {
+                    heroSubtitle.innerHTML = `A journey that combines knowledge, culture, and spirituality<br>
+                        with an accredited certificate from Umm Al-Qura University`;
+                }
+            }
+            
+            // Footer arrows removed - no longer needed
+            
+            // Update footer grid and sections
+            const footerGrid = document.getElementById('footer-grid');
+            if (footerGrid) {
+                footerGrid.setAttribute('dir', direction);
+                
+                // Get all columns BEFORE removing them
+                const col1 = footerGrid.querySelector('.footer-col-1'); // Company Info
+                const col2 = footerGrid.querySelector('.footer-col-2'); // Quick Links
+                const col3 = footerGrid.querySelector('.footer-col-3'); // Our Other Pages
+                const col4 = footerGrid.querySelector('.footer-col-4'); // Contact Info
+                const col5 = footerGrid.querySelector('.footer-col-5'); // Mobile Apps
+                
+                // Only reorder if all columns exist
+                if (col1 && col2 && col3 && col4 && col5) {
+                    // Remove all columns temporarily
+                    col1.remove();
+                    col2.remove();
+                    col3.remove();
+                    col4.remove();
+                    col5.remove();
+                    
+                    // Same order for both languages: Company Info, Quick Links, Our Other Pages, Contact Info, Mobile Apps
+                    // This maintains the same visual order in both RTL (Arabic) and LTR (English)
+                    footerGrid.appendChild(col1); // Company Info
+                    footerGrid.appendChild(col2); // Quick Links
+                    footerGrid.appendChild(col3); // Our Other Pages
+                    footerGrid.appendChild(col4); // Contact Info
+                    footerGrid.appendChild(col5); // Mobile Apps
+                }
+            }
+            
+            // Update copyright section
+            const footerCopyright = document.getElementById('footer-copyright');
+            if (footerCopyright) {
+                footerCopyright.setAttribute('dir', direction);
+            }
+            
+            // Update motivation quote and text
+            const motivationQuote = document.getElementById('motivation-quote');
+            if (motivationQuote) {
+                motivationQuote.setAttribute('dir', direction);
+            }
+            const motivationText = document.getElementById('motivation-text');
+            if (motivationText) {
+                motivationText.setAttribute('dir', direction);
+            }
+            
+            // Update all section titles
+            document.querySelectorAll('.section-title').forEach(title => {
+                title.setAttribute('dir', direction);
+            });
+            
+            // Update all text paragraphs in sections
+            document.querySelectorAll('section p').forEach(p => {
+                p.setAttribute('dir', direction);
+            });
+            
+            // Update all buttons and links
+            document.querySelectorAll('a[data-lang-key], button[data-lang-key]').forEach(elem => {
+                elem.setAttribute('dir', direction);
+            });
+            
+            // Update all headings
+            document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
+                if (heading.hasAttribute('data-lang-key') || heading.querySelector('[data-lang-key]')) {
+                    heading.setAttribute('dir', direction);
+                }
+            });
+            
+            // Update list items with data-lang-key
+            document.querySelectorAll('li').forEach(li => {
+                if (li.querySelector('[data-lang-key]')) {
+                    li.setAttribute('dir', direction);
+                }
+            });
+            
+            // Update pricing cards and feature descriptions
+            document.querySelectorAll('#pricing .flex.flex-col').forEach(card => {
+                card.setAttribute('dir', direction);
+            });
+            
+            // Update all cards with feature/service descriptions
+            document.querySelectorAll('.bg-white.rounded-3xl, .bg-gradient-to-br').forEach(card => {
+                const hasTranslation = card.querySelector('[data-lang-key]');
+                if (hasTranslation) {
+                    card.setAttribute('dir', direction);
+                }
+            });
+            
+            // Update contact cards
+            document.querySelectorAll('#contact .bg-white.rounded-2xl').forEach(card => {
+                card.setAttribute('dir', direction);
+            });
+            
+            // Update journey section steps
+            document.querySelectorAll('#journey .relative').forEach(step => {
+                if (step.querySelector('[data-lang-key]')) {
+                    step.setAttribute('dir', direction);
+                }
+            });
+            
+            // Update all carousels to reflect language direction change
+            Object.keys(carousels).forEach(carouselId => {
+                updateCarousel(carouselId);
+            });
+        }
+        
+        // Initialize language on page load
+        window.addEventListener('load', function() {
+            switchLanguage(currentLang);
+        });
+    </script>
+</body>
+</html>
