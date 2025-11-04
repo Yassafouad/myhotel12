@@ -39,8 +39,9 @@ function updateLanguage(lang) {
 }
 
 // Update language toggle button text
+// Show the language that will be switched TO (not the current language)
 function updateLangToggleText(lang) {
-    currentLangSpan.textContent = lang === 'ar' ? 'العربية' : 'English';
+    currentLangSpan.textContent = lang === 'ar' ? 'English' : 'عربي';
 }
 
 // ===== Smooth Scroll for Navigation Links =====
@@ -262,6 +263,7 @@ document.head.appendChild(style);
 document.addEventListener('DOMContentLoaded', () => {
     // Set initial language to English
     updateLanguage('en');
+    updateLangToggleText('en');
     
     // Add loaded class for transitions
     document.body.classList.add('loaded');
