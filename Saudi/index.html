@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="description" content="دليل السفر إلى السعودية - Travel Guide to Saudi Arabia">
+    <title>دليل السفر إلى السعودية | Travel Guide to Saudi Arabia</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav-logo">
+                <img src="assets/logo.png" alt="Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link" data-i18n="nav.about">حول السعودية</a></li>
+                <li class="nav-item"><a href="#travel-guide" class="nav-link" data-i18n="nav.travel">دليل السفر</a></li>
+                <li class="nav-item"><a href="#transportation" class="nav-link" data-i18n="nav.transport">المواصلات</a></li>
+                <li class="nav-item"><a href="#visa" class="nav-link" data-i18n="nav.visa">التأشيرة</a></li>
+                <li class="nav-item"><a href="#registration" class="nav-link" data-i18n="nav.register">التسجيل</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="ar" id="lang-ar">عربي</button>
+                <button class="lang-btn" data-lang="en" id="lang-en">English</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="hero-content container">
+            <div class="hero-badge" data-i18n="hero.badge">اكتشف المملكة</div>
+            <h1 class="hero-title">
+                <span class="hero-title-main" data-i18n="hero.title">دليل السفر إلى السعودية</span>
+                <span class="hero-subtitle" data-i18n="hero.subtitle"></span>
+            </h1>
+            <p class="hero-description" data-i18n="hero.description">
+                افتتحت المملكة العربية السعودية أبوابها للسياحة الترفيهية في عام 2019، لتصبح واحدة من آخر الحدود التي يمكن للمسافرين الشغوفين اكتشافها.
+            </p>
+            <div class="hero-actions">
+                <button class="cta-button primary" data-i18n="hero.cta" id="cta-button">
+                    <span>سجّل الآن</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <a href="#about" class="cta-button secondary" data-i18n="hero.learn">
+                    <span>اعرف المزيد</span>
+                </a>
+            </div>
+            <div class="hero-payment">
+                <span class="hero-payment-label" data-i18n="hero.payment.title">طرق دفع آمنة وسريعة</span>
+                <div class="hero-payment-icons" aria-label="Available payment methods">
+                    <span class="payment-chip"><span class="payment-text">Mada</span></span>
+                    <span class="payment-chip"><i class="fab fa-cc-visa" aria-hidden="true"></i><span class="payment-text">Visa</span><span class="sr-only">Visa</span></span>
+                    <span class="payment-chip"><i class="fab fa-cc-mastercard" aria-hidden="true"></i><span class="payment-text">Mastercard</span><span class="sr-only">Mastercard</span></span>
+                    <span class="payment-chip"><i class="fab fa-apple-pay" aria-hidden="true"></i><span class="payment-text">Apple Pay</span><span class="sr-only">Apple Pay</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- About Saudi Arabia Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about.title">حول المملكة العربية السعودية</h2>
+            <div class="about-list">
+                <div class="about-item">
+                    <h3 class="about-item-title" data-i18n="about.card1.title">الثقافة</h3>
+                    <p class="about-item-text" data-i18n="about.card1.text">
+                        تتميز المملكة العربية السعودية بتراث غني وتقاليد عريقة؛ فقد كانت عبر التاريخ مركزًا تجاريًا مهمًا وشهدت ولادة الدين الإسلامي، وتشهد اليوم تحولًا ثقافيًا يوازن بين العادات القديمة وروح العصر الحديث مع مبادرات ثقافية ومهرجانات عالمية تعرّف الزوار على الفنون والموسيقى والمطبخ المحلي.
+                    </p>
+                </div>
+                <div class="about-item">
+                    <h3 class="about-item-title" data-i18n="about.card2.title">اللغة</h3>
+                    <p class="about-item-text" data-i18n="about.card2.text">
+                        العربية هي اللغة الرسمية المستخدمة في التعاملات اليومية، بينما تُعد الإنجليزية اللغة الثانية غير الرسمية ويتحدث بها شريحة واسعة من السكان؛ وتُعرض لوحات السير، القوائم، والخدمات السياحية باللغتين لضمان تجربة ميسّرة للزوار، مع توفر مترجمين ودلائل بلغات إضافية في أبرز الوجهات.
+                    </p>
+                </div>
+                <div class="about-item">
+                    <h3 class="about-item-title" data-i18n="about.card3.title">الآداب العامة</h3>
+                    <p class="about-item-text" data-i18n="about.card3.text">
+                        يُعد احترام الآخرين جزءًا أساسيًا من الحياة اليومية؛ لذا يُنصح بتجنب الكلام البذيء والسلوك الصاخب والالتزام باللياقات العامة في جميع الأوقات، مع اختيار ملابس محتشمة في الأماكن العامة ومراعاة الخصوصية عند التصوير لضمان تجربة مريحة للجميع.
+                    </p>
+                </div>
+                <div class="about-item">
+                    <h3 class="about-item-title" data-i18n="about.card4.title">الكحول والمواد الممنوعة</h3>
+                    <p class="about-item-text" data-i18n="about.card4.text">
+                        يُحظر بيع وشراء واستهلاك المشروبات الكحولية أو المخدرات في المملكة العربية السعودية، كما تُطبَّق قوانين صارمة على المواد المحظورة والممنوعات، ويُنصح الزوار بالاطلاع على قائمة المقتنيات المسموح بها قبل السفر للحفاظ على سلامتهم.
+                    </p>
+                </div>
+                <div class="about-item">
+                    <h3 class="about-item-title" data-i18n="about.card5.title">الدين والحياة اليومية</h3>
+                    <p class="about-item-text" data-i18n="about.card5.text">
+                        تُغلق المتاجر لفترات وجيزة أثناء أوقات الصلاة لإتاحة وقت للعبادة، ويتحول نمط الحياة خلال شهر رمضان المبارك إلى إيقاع روحاني هادئ يعكس الخصوصية الدينية للمملكة، كما تُرحَّب الوفود المشاركة في مناسك الحج والعمرة على مدار العام ضمن منظومة خدمات متكاملة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Guide Section -->
+    <section class="travel-guide section" id="travel-guide">
+        <div class="container">
+            <h2 class="section-title" data-i18n="travel.title">دليل التخطيط لرحلتك</h2>
+            <div class="travel-guide-layout">
+                <div class="travel-group">
+                    <div class="travel-group-header">
+                        <span class="travel-group-badge" data-i18n="travel.group1.badge">الأساسيات</span>
+                        <h3 class="travel-group-title" data-i18n="travel.group1.title">أساسيات التخطيط</h3>
+                        <p class="travel-group-description" data-i18n="travel.group1.description">
+                            معلومات سريعة تساعدك على ترتيب مستنداتك، ميزانيتك، وطرق التواصل قبل الوصول إلى المملكة.
+                        </p>
+                    </div>
+                    <div class="travel-list">
+                        <div class="travel-item">
+                            <div class="travel-item-media">
+                                <img src="assets/S.png" alt="معلومات مهمة خلال زيارتك" loading="lazy">
+                            </div>
+                            <div class="travel-item-content">
+                                <h3 class="travel-item-title" data-i18n="travel.card1.title">معلومات مهمة خلال زيارتك</h3>
+                                <p class="travel-item-text" data-i18n="travel.card1.text">
+                                    زيارة السعودية فرصة لاكتشاف التراث الأصيل وكرم الضيافة والمناظر الطبيعية الخلابة؛ احرص على الاستفادة من المعلومات المتعلقة بالتنقل والتسوق والتواصل لتجربة مريحة وممتعة.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="travel-item">
+                            <div class="travel-item-media">
+                                <img src="assets/R.jpg" alt="طرق الدفع والعملات" loading="lazy">
+                            </div>
+                            <div class="travel-item-content">
+                                <h3 class="travel-item-title" data-i18n="travel.card6.title">طرق الدفع والعملات</h3>
+                                <p class="travel-item-text" data-i18n="travel.card6.text">
+                                    الريال السعودي هو العملة الرسمية، وتدعم المتاجر والفنادق بطاقات الدفع الدولية، كما تتوفر المحافظ الرقمية مثل مدى وأبل باي لتسهيل عمليات الشراء.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="travel-item">
+                            <div class="travel-item-media">
+                                <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=1000&q=80" alt="الرعاية الصحية في السعودية" loading="lazy">
+                            </div>
+                            <div class="travel-item-content">
+                                <h3 class="travel-item-title" data-i18n="travel.card7.title">الرعاية الصحية</h3>
+                                <p class="travel-item-text" data-i18n="travel.card7.text">
+                                    تتوفر في السعودية منشآت طبية متقدمة في المدن الرئيسية، ويُنصح بحمل تأمين صحي ساري، ومعرفة أقرب المراكز الطبية والمستشفيات خلال رحلتك.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="travel-item">
+                            <div class="travel-item-media">
+                                <img src="assets/T.png" alt="الطوارئ والدعم" loading="lazy">
+                            </div>
+                            <div class="travel-item-content">
+                                <h3 class="travel-item-title" data-i18n="travel.card11.title">الطوارئ والدعم</h3>
+                                <p class="travel-item-text" data-i18n="travel.card11.text">
+                                    تعمل فرق الطوارئ على مدار الساعة عبر رقم 911 في معظم المناطق، وتتوفر مراكز معلومات سياحية وخدمات دعم حكومية لتقديم المساعدة والتوجيه للمسافرين.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="travel-group">
+                    <div class="travel-group-header">
+                        <span class="travel-group-badge" data-i18n="travel.group2.badge">المواسم</span>
+                        <h3 class="travel-group-title" data-i18n="travel.group2.title">اختيار الوقت الأنسب</h3>
+                        <p class="travel-group-description" data-i18n="travel.group2.description">
+                            تعرف على أجواء كل فصل لتحدد الملابس والأنشطة التي تناسبك في كل منطقة من مناطق المملكة.
+                        </p>
+                    </div>
+                    <div class="travel-list">
+                        <div class="travel-item">
+                            <div class="travel-item-media">
+                                <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1000&q=80" alt="صيف السعودية" loading="lazy">
+                            </div>
+                            <div class="travel-item-content">
+                                <h3 class="travel-item-title" data-i18n="travel.card2.title">صيف السعودية</h3>
+                                <p class="travel-item-text" data-i18n="travel.card2.text">
+                                    يزخر الصيف بالأنشطة البحرية مثل الغطس والإبحار في البحر الأحمر والخليج العربي، كما تُعد جبال الطائف ملاذًا منعشًا بفضل أجوائها المعتدلة.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="travel-item">
+                            <div class="travel-item-media">
+                                <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1000&q=80" alt="شتاء السعودية" loading="lazy">
+                            </div>
+                            <div class="travel-item-content">
+                                <h3 class="travel-item-title" data-i18n="travel.card3.title">شتاء السعودية</h3>
+                                <p class="travel-item-text" data-i18n="travel.card3.text">
+                                    يمتاز الشتاء بأجواء معتدلة نهارًا وباردة ليلًا، مثالي للتخييم واستكشاف المواقع الأثرية في العُلا ورؤية الثلوج في الشمال ومنطقة عسير.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="travel-item">
+                            <div class="travel-item-media">
+                                <img src="assets/RA.jpg" alt="ربيع السعودية" loading="lazy">
+                            </div>
+                            <div class="travel-item-content">
+                                <h3 class="travel-item-title" data-i18n="travel.card4.title">ربيع السعودية</h3>
+                                <p class="travel-item-text" data-i18n="travel.card4.text">
+                                    يجمع الربيع بين أجواء معتدلة في الرياض والوسط، وبرودة في الشمال، وأمطار على مرتفعات عسير، ما يجعله موسمًا مثاليًا للأنشطة الخارجية والتطعيس.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="travel-item">
+                            <div class="travel-item-media">
+                                <img src="assets/KH.webp" alt="خريف السعودية" loading="lazy">
+                            </div>
+                            <div class="travel-item-content">
+                                <h3 class="travel-item-title" data-i18n="travel.card5.title">خريف السعودية</h3>
+                                <p class="travel-item-text" data-i18n="travel.card5.text">
+                                    يتسم الخريف بطقس لطيف في الشمال والمرتفعات الجنوبية، مع أيام دافئة وأمسيات معتدلة مثالية للتنزه أو الاستجمام في ينابيع الأحساء.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="travel-group">
+                    <div class="travel-group-header">
+                        <span class="travel-group-badge" data-i18n="travel.group3.badge">تجربتك</span>
+                        <h3 class="travel-group-title" data-i18n="travel.group3.title">أسلوب الحياة أثناء الرحلة</h3>
+                        <p class="travel-group-description" data-i18n="travel.group3.description">
+                            اكتشف خيارات التسوق والإقامة التي تمنحك راحة أكبر وتحافظ على طابع المملكة الأصيل.
+                        </p>
+                    </div>
+                    <div class="travel-list">
+                        <div class="travel-item">
+                            <div class="travel-item-media">
+                                <img src="assets/SS.jpg" alt="التسوق والتسعير" loading="lazy">
+                            </div>
+                            <div class="travel-item-content">
+                                <h3 class="travel-item-title" data-i18n="travel.card8.title">التسوق والتسعير</h3>
+                                <p class="travel-item-text" data-i18n="travel.card8.text">
+                                    تنتشر مراكز التسوق الحديثة والأسواق الشعبية في مختلف المدن، وتُعرض الأسعار بالريال السعودي مع خيارات للتفاوض في الأسواق التقليدية؛ احتفظ بإيصالات الشراء واستفد من استرداد الضريبة للزوار في نقاط المطار.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="travel-item">
+                            <div class="travel-item-media">
+                                <img src="https://images.unsplash.com/photo-1501876725168-00c445821c9e?auto=format&fit=crop&w=1000&q=80" alt="الإقامة والضيافة" loading="lazy">
+                            </div>
+                            <div class="travel-item-content">
+                                <h3 class="travel-item-title" data-i18n="travel.card9.title">الإقامة والضيافة</h3>
+                                <p class="travel-item-text" data-i18n="travel.card9.text">
+                                    توفر المملكة خيارات إقامة متعددة من المنتجعات الفاخرة إلى دور الضيافة التراثية، مع خدمات استقبال متاحة على مدار الساعة وموظفين يجيدون عدة لغات لتلبية احتياجات الزوار.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transportation Section -->
+    <section class="transportation section" id="transportation">
+        <div class="container">
+            <h2 class="section-title" data-i18n="transport.title">دليل المواصلات في السعودية</h2>
+            <div class="transport-grid">
+                <div class="transport-card">
+                    <div class="transport-card-media">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1000&h=700&fit=crop" alt="Air Travel" loading="lazy">
+                    </div>
+                    <div class="transport-card-content">
+                        <h3 class="transport-card-title" data-i18n="transport.card1.title">السفر الجوي</h3>
+                        <p class="transport-card-text" data-i18n="transport.card1.text">
+                            تسهل شبكة المطارات الدولية والمحلية الوصول إلى معظم المدن السعودية، مع رحلات منتظمة تربط الرياض وجدة والدمام بالوجهات الداخلية والعالمية.
+                        </p>
+                    </div>
+                </div>
+                <div class="transport-card">
+                    <div class="transport-card-media">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1000&h=700&fit=crop" alt="Car Rental" loading="lazy">
+                    </div>
+                    <div class="transport-card-content">
+                        <h3 class="transport-card-title" data-i18n="transport.card2.title">التنقل بالسيارة</h3>
+                        <p class="transport-card-text" data-i18n="transport.card2.text">
+                            تتوفر خدمات تأجير السيارات والنقل التشاركي بسهولة من المطارات والفنادق، ما يمنحك مرونة في التنقل واستكشاف وجهاتك بالوتيرة التي تناسبك.
+                        </p>
+                    </div>
+                </div>
+                <div class="transport-card">
+                    <div class="transport-card-media">
+                        <img src="https://images.unsplash.com/photo-1556695736-d287caebc48e?auto=format&fit=crop&w=1100&q=80" alt="مترو الرياض الحديث - أنظمة مترو حديثة في الرياض ومكة المكرمة" loading="lazy">
+                    </div>
+                    <div class="transport-card-content">
+                        <h3 class="transport-card-title" data-i18n="transport.card3.title">المترو والنقل العام</h3>
+                        <p class="transport-card-text" data-i18n="transport.card3.text">
+                            يوفر مترو الرياض ومكة إلى جانب الحافلات الحديثة خيارات نقل عام فعالة بمسارات تغطي الأحياء والمعالم الحيوية.
+                        </p>
+                    </div>
+                </div>
+                <div class="transport-card">
+                    <div class="transport-card-media">
+                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1000&h=700&fit=crop" alt="Intercity Buses" loading="lazy">
+                    </div>
+                    <div class="transport-card-content">
+                        <h3 class="transport-card-title" data-i18n="transport.card4.title">الحافلات بين المدن</h3>
+                        <p class="transport-card-text" data-i18n="transport.card4.text">
+                            تربط الحافلات السريعة بين المدن الرئيسة وتوفر حجوزات إلكترونية ومقاعد مريحة، مما يجعل السفر البري خيارًا اقتصاديًا وموثوقًا.
+                        </p>
+                    </div>
+                </div>
+                <div class="transport-card">
+                    <div class="transport-card-media">
+                        <img src="assets/B.jpg" alt="الجولات البحرية والتنقل بالقوارب" loading="lazy">
+                    </div>
+                    <div class="transport-card-content">
+                        <h3 class="transport-card-title" data-i18n="transport.card5.title">النقل البحري والجولات</h3>
+                        <p class="transport-card-text" data-i18n="transport.card5.text">
+                            توفر الوجهات الساحلية على البحر الأحمر والخليج العربي رحلات بحرية وجولات قوارب ويخوت مستأجرة لاستكشاف الجزر والشعاب المرجانية، مع وجود مراسي وخدمات سلامة معتمدة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visa & FAQs Section -->
+    <section class="visa section" id="visa">
+        <div class="container">
+            <h2 class="section-title" data-i18n="visa.title">التأشيرة والأسئلة الشائعة</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="visa.faq1.question">
+                        ما هي التأشيرة الإلكترونية السعودية؟
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="visa.faq1.answer">
+                            التأشيرة السياحية الإلكترونية تتيح للزوار من الدول المؤهلة استكشاف المملكة لأغراض الترفيه أو زيارة العائلة والأصدقاء. يمكن الحصول عليها بالكامل عبر الإنترنت خلال دقائق، وتمنح صلاحية متعددة الدخول لمدة عام مع إمكانية الإقامة حتى 90 يومًا في كل زيارة.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="visa.faq2.question">
+                        ما الشروط ومتطلبات التقديم؟
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="visa.faq2.answer">
+                            يحتاج المتقدم إلى جواز سفر ساري لمدة لا تقل عن ستة أشهر، وصورة شخصية حديثة، وعنوان إقامة داخل المملكة، بالإضافة إلى وسيلة دفع إلكترونية لتسديد الرسوم. يجب أن تطابق البيانات المدخلة المعلومات الرسمية في الجواز لتجنب التأخير.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="visa.faq3.question">
+                        ما هي المستندات الداعمة والتأمين الطبي؟
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="visa.faq3.answer">
+                            يشترط تقديم تأمين صحي معتمد يغطي فترة الإقامة داخل المملكة، ويُصدر تلقائيًا ضمن طلب التأشيرة الإلكترونية. قد تُطلب مستندات إضافية عند الضرورة مثل إثبات الإقامة أو تذاكر السفر ذهابًا وإيابًا، ويتم إخطار المتقدم في حال الحاجة إليها.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="visa.faq4.question">
+                        ما مدة الإقامة والزيارات المسموح بها؟
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="visa.faq4.answer">
+                            تسمح التأشيرة السياحية بإقامة متصلة تصل إلى 90 يومًا لكل رحلة، وبحد أقصى 180 يومًا خلال العام الواحد. يجب الخروج من المملكة قبل انتهاء المدة المحددة، ويمكن إعادة الدخول طالما كانت التأشيرة سارية.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="visa.faq5.question">
+                        كيف يتم التقديم واستلام التأشيرة؟
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="visa.faq5.answer">
+                            يتم إنشاء حساب في المنصة الرسمية، وإكمال نموذج الطلب، وتحميل المستندات، ودفع الرسوم إلكترونيًا. بعد الموافقة، تُرسل التأشيرة على البريد الإلكتروني في ملف PDF يمكن طباعته أو حفظه على الهاتف لتقديمه عند الوصول.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="visa.faq6.question">
+                        ماذا يحدث عند الوصول إلى المملكة؟
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="visa.faq6.answer">
+                            عند الوصول، يُقدّم جواز السفر مع التأشيرة الإلكترونية لمسؤول الجوازات، وقد يُطلب مسح بصمات الأصابع وتأكيد بيانات الإقامة. يحتفظ المسافر بنسخة من التأشيرة وتأمينه الصحي طوال فترة الزيارة ويلتزم بالأنظمة المحلية.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" data-i18n="visa.faq7.question">
+                        من يمكنه تقديم الدعم في حال وجود استفسارات؟
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="visa.faq7.answer">
+                            توفر المنصة الإلكترونية للتأشيرة مركز دعم يعمل على مدار الساعة، كما يمكن التواصل مع مركز العناية بالزوار داخل المملكة عبر الرقم الموحد 930 أو مراجعة مراكز الخدمة في المطارات الدولية للحصول على المساعدة اللازمة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration section" id="registration">
+        <div class="container">
+            <h2 class="section-title" data-i18n="register.title">سجّل الآن للحصول على دليل شامل لرحلتك إلى السعودية</h2>
+            <p class="registration-subtitle" data-i18n="register.subtitle">
+                املأ النموذج أدناه للحصول على دليل شامل ومعلومات محدثة حول رحلتك إلى المملكة العربية السعودية.
+            </p>
+            <div class="form-container">
+                <div id="zf_div_UD8zEeH7GPhm36l2196UCosvDmlcgopv38qw9Ab2yS0"></div>
+                <script type="text/javascript">
+                (function() {
+                try{
+                var f = document.createElement("iframe");
+                var ifrmSrc = 'https://forms.zohopublic.sa/MyHotelsSA/form/TouristVisatoSaudiArabia/formperma/UD8zEeH7GPhm36l2196UCosvDmlcgopv38qw9Ab2yS0?zf_rszfm=1&zf_enablecamera=true';
+                try{
+                if ( typeof ZFAdvLead != "undefined" && typeof zfutm_zfAdvLead != "undefined" ) {
+                for( var prmIdx = 0 ; prmIdx < ZFAdvLead.utmPNameArr.length ; prmIdx ++ ) {
+                var utmPm = ZFAdvLead.utmPNameArr[ prmIdx ];
+                utmPm = ( ZFAdvLead.isSameDomian && ( ZFAdvLead.utmcustPNameArr.indexOf(utmPm) == -1 ) ) ? "zf_" + utmPm : utmPm;
+                var utmVal = zfutm_zfAdvLead.zfautm_gC_enc( ZFAdvLead.utmPNameArr[ prmIdx ] );
+                if ( typeof utmVal !== "undefined" ) {
+                if ( utmVal != "" ) {
+                if(ifrmSrc.indexOf('?') > 0){
+                ifrmSrc = ifrmSrc+'&'+utmPm+'='+utmVal;
+                }else{
+                ifrmSrc = ifrmSrc+'?'+utmPm+'='+utmVal;
+                }
+                }
+                }
+                }
+                }
+                if ( typeof ZFLead !== "undefined" && typeof zfutm_zfLead !== "undefined" ) {
+                for( var prmIdx = 0 ; prmIdx < ZFLead.utmPNameArr.length ; prmIdx ++ ) {
+                var utmPm = ZFLead.utmPNameArr[ prmIdx ];
+                var utmVal = zfutm_zfLead.zfutm_gC_enc( ZFLead.utmPNameArr[ prmIdx ] );
+                if ( typeof utmVal !== "undefined" ) {
+                if ( utmVal != "" ){
+                if(ifrmSrc.indexOf('?') > 0){
+                ifrmSrc = ifrmSrc+'&'+utmPm+'='+utmVal;
+                }else{
+                ifrmSrc = ifrmSrc+'?'+utmPm+'='+utmVal;
+                }
+                }
+                }
+                }
+                }
+                }catch(e){}
+                f.src = ifrmSrc;
+                f.style.border="none";
+                f.style.height="1947px";
+                f.style.width="100%";
+                f.style.maxWidth="100%";
+                f.style.transition="all 0.5s ease";
+                f.setAttribute("aria-label", 'Tourist Visa to Saudi Arabia');
+                f.setAttribute("allow","camera;");
+                var d = document.getElementById("zf_div_UD8zEeH7GPhm36l2196UCosvDmlcgopv38qw9Ab2yS0");
+                d.appendChild(f);
+                window.addEventListener('message', function (){
+                var evntData = event.data;
+                if( evntData && evntData.constructor == String ){
+                var zf_ifrm_data = evntData.split("|");
+                if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
+                var zf_perma = zf_ifrm_data[0];
+                var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
+                var iframe = document.getElementById("zf_div_UD8zEeH7GPhm36l2196UCosvDmlcgopv38qw9Ab2yS0").getElementsByTagName("iframe")[0];
+                if ( (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
+                var prevIframeHeight = iframe.style.height;
+                var zf_tout = false;
+                if( zf_ifrm_data.length == 3 ) {
+                iframe.scrollIntoView();
+                zf_tout = true;
+                }
+                if ( prevIframeHeight != zf_ifrm_ht_nw ) {
+                if( zf_tout ) {
+                setTimeout(function(){
+                iframe.style.height = zf_ifrm_ht_nw;
+                },500);
+                } else {
+                iframe.style.height = zf_ifrm_ht_nw;
+                }
+                }
+                }
+                }
+                }
+                }, false);
+                }catch(e){}
+                })();
+                </script>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-logo-section">
+                    <img src="assets/logo.png" alt="Logo" class="footer-logo">
+                    <p class="company-name" data-i18n="footer.company">فنادقي MyHotels.SA</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-i18n="footer.quickLinks">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about" data-i18n="nav.about">حول السعودية</a></li>
+                        <li><a href="#travel-guide" data-i18n="nav.travel">دليل السفر</a></li>
+                        <li><a href="#transportation" data-i18n="nav.transport">المواصلات</a></li>
+                        <li><a href="#visa" data-i18n="nav.visa">التأشيرة</a></li>
+                        <li><a href="#registration" data-i18n="nav.register">التسجيل</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-i18n="footer.otherPages">صفحاتنا الأخرى</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html" data-i18n="footer.pageYas">جزيرة ياس</a></li>
+                        <li><a href="../disney1/index.html" data-i18n="footer.pageDisney">ديزني لاند باريس</a></li>
+                        <li><a href="../omrahvip2/index.html" data-i18n="footer.pageUmrah">عمرة VVIP</a></li>
+                        <li><a href="../leaarn2/index.html" data-i18n="footer.pageLearn">تعلم اللغة العربية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-i18n="footer.follow">تابعنا</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <a href="https://www.myhotels.sa" target="_blank" rel="noopener noreferrer" data-i18n="footer.website">الموقع</a>
+                        </li>
+                        <li>
+                            <a href="https://facebook.com/MyHotelsSA" target="_blank" rel="noopener noreferrer" data-i18n="footer.facebook">فيسبوك</a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/MyHotelsSA" target="_blank" rel="noopener noreferrer" data-i18n="footer.instagram">إنستغرام</a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/MyHotelsSA" target="_blank" rel="noopener noreferrer" data-i18n="footer.twitter">تويتر/إكس</a>
+                        </li>
+                        <li>
+                            <a href="https://youtube.com/MyHotelsSA" target="_blank" rel="noopener noreferrer" data-i18n="footer.youtube">يوتيوب</a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/company/MyHotelsSA" target="_blank" rel="noopener noreferrer" data-i18n="footer.linkedin">لينكدإن</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-i18n="footer.contact">اتصل بنا</h3>
+                    <ul class="footer-links footer-contact">
+                        <li>
+                            <a href="tel:+966920033025" data-i18n="footer.phone" dir="ltr">
+                                <i class="fas fa-phone contact-icon"></i>
+                                <span>+966 920 033 025</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:CC@MyHotels.SA" data-i18n="footer.email">
+                                <i class="fas fa-envelope contact-icon"></i>
+                                <span>CC@MyHotels.SA</span>
+                            </a>
+                        </li>
+                        <li class="footer-address" data-i18n="footer.address">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <span>جدة، المملكة العربية السعودية</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title" data-i18n="footer.download">حمل التطبيق</h3>
+                    <div class="app-downloads">
+                        <a href="https://apps.apple.com/sa/app/myhotels-sa/id1457961680" target="_blank" rel="noopener noreferrer" class="app-link">
+                            <span class="app-text" data-i18n="footer.appStore">حمل من App Store</span>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.genx.myhotels&hl=en" target="_blank" rel="noopener noreferrer" class="app-link">
+                            <span class="app-text" data-i18n="footer.googlePlay">حمل من Google Play</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <p class="footer-company-name" data-i18n="footer.company">MyHotels.SA فنادقي</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
