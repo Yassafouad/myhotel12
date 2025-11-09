@@ -5,12 +5,12 @@ const translations = {
         'nav.travel': 'دليل السفر',
         'nav.transport': 'المواصلات',
         'nav.visa': 'التأشيرة',
-        'nav.register': 'التسجيل',
+        'nav.register': 'احصل على التأشيرة',
         'hero.badge': 'اكتشف المملكة',
         'hero.title': 'دليل السفر إلى السعودية',
         'hero.subtitle': '',
         'hero.description': 'افتتحت المملكة العربية السعودية أبوابها للسياحة الترفيهية في عام 2019، لتصبح واحدة من آخر الحدود التي يمكن للمسافرين الشغوفين اكتشافها.',
-        'hero.cta': 'سجّل الآن',
+        'hero.cta': 'احصل على التأشيرة',
         'hero.learn': 'اعرف المزيد',
         'hero.stat1': 'كم من السواحل',
         'hero.stat2': 'أكبر دولة في العالم',
@@ -19,7 +19,7 @@ const translations = {
         'hero.payment.text': 'ادفع بالبطاقات الدولية، مدى، أو المحافظ الرقمية مثل أبل باي للاستمتاع بتجربة حجز سلسة.',
         'about.title': 'حول المملكة العربية السعودية',
         'about.card1.title': 'الثقافة',
-        'about.card1.text': 'تتميز المملكة العربية السعودية بتراث غني وتقاليد عريقة؛ فقد كانت عبر التاريخ مركزًا تجاريًا مهمًا وشهدت ولادة الدين الإسلامي، وتشهد اليوم تحولًا ثقافيًا يوازن بين العادات القديمة وروح العصر الحديث مع مبادرات ثقافية ومهرجانات عالمية تعرّف الزوار على الفنون والموسيقى والمطبخ المحلي.',
+        'about.card1.text': 'تتميز المملكة العربية السعودية بتراث غني وتقاليد عريقة؛ فقد كانت عبر التاريخ مركزًا تجاريًا مهمًا وشهدت ولادة الدين الإسلامي، وتشهد اليوم تحولًا ثقافيًا يوازن بين العادات القديمة وروح العصر الحديث، مع إبراز مواقع مدرجة على قائمة التراث العالمي لليونسكو مثل الحِجر (مدائن صالح) وحي الطريف بالدرعية وواحة الأحساء، إضافة إلى مبادرات ثقافية ومهرجانات عالمية تعرّف الزوار على الفنون والموسيقي.',
         'about.card2.title': 'اللغة',
         'about.card2.text': 'العربية هي اللغة الرسمية المستخدمة في التعاملات اليومية، بينما تُعد الإنجليزية اللغة الثانية غير الرسمية ويتحدث بها شريحة واسعة من السكان؛ وتُعرض لوحات السير، القوائم، والخدمات السياحية باللغتين لضمان تجربة ميسّرة للزوار، مع توفر مترجمين ودلائل بلغات إضافية في أبرز الوجهات.',
         'about.card3.title': 'الآداب العامة',
@@ -50,6 +50,8 @@ const translations = {
         'travel.card5.text': 'يتسم الخريف بطقس لطيف في الشمال والمرتفعات الجنوبية، مع أيام دافئة وأمسيات معتدلة مثالية للتنزه أو الاستجمام في ينابيع الأحساء.',
         'travel.card6.title': 'طرق الدفع والعملات',
         'travel.card6.text': 'الريال السعودي هو العملة الرسمية، وتدعم المتاجر والفنادق بطاقات الدفع الدولية، كما تتوفر المحافظ الرقمية مثل مدى وأبل باي لتسهيل عمليات الشراء.',
+        'payments.discover': 'اكتشف العملات',
+        'payments.gallery.title': 'العملات السعودية',
         'travel.card7.title': 'الرعاية الصحية',
         'travel.card7.text': 'تتوفر في السعودية منشآت طبية متقدمة في المدن الرئيسية، ويُنصح بحمل تأمين صحي ساري، ومعرفة أقرب المراكز الطبية والمستشفيات خلال رحلتك.',
         'travel.card8.title': 'التسوق والتسعير',
@@ -118,12 +120,12 @@ const translations = {
         'nav.travel': 'Travel Guide',
         'nav.transport': 'Transportation',
         'nav.visa': 'Visa',
-        'nav.register': 'Registration',
+        'nav.register': 'Get Your Visa',
         'hero.badge': 'Discover the Kingdom',
         'hero.title': 'Travel Guide to Saudi Arabia',
         'hero.subtitle': '',
         'hero.description': 'Recently opening its doors to leisure tourism in 2019, the Kingdom of Saudi Arabia has become one of the last frontiers for passionate travelers to discover.',
-        'hero.cta': 'Register Now',
+        'hero.cta': 'Get Your Visa',
         'hero.learn': 'Learn More',
         'hero.stat1': 'km of Coastline',
         'hero.stat2': 'Largest Country in the World',
@@ -163,6 +165,8 @@ const translations = {
         'travel.card5.text': 'Autumn brings gentle temperatures in the north and southwest, with warm days and mild evenings perfect for alfresco dining or soaking in Al-Ahsa springs.',
         'travel.card6.title': 'Payments & Currency',
         'travel.card6.text': 'The Saudi Riyal (SAR) is the official currency. International cards, Mada, and digital wallets like Apple Pay and Google Pay are widely accepted.',
+        'payments.discover': 'Discover the Currency Gallery',
+        'payments.gallery.title': 'Saudi Currency Gallery',
         'travel.card7.title': 'Healthcare',
         'travel.card7.text': 'Saudi cities host advanced hospitals and clinics—carry active health insurance and map nearby facilities before you travel.',
         'travel.card8.title': 'Shopping & Pricing',
@@ -228,6 +232,144 @@ const translations = {
     }
 };
 
+const paymentsSlides = [
+    {
+        denomination: { ar: '500 ريال سعودي', en: 'SAR 500 Banknote' },
+        images: {
+            front: 'assets/500.png',
+            back: 'assets/5001.png'
+        },
+        caption: {
+            ar: '500 ريال - الوجه: صورة الملك عبدالعزيز بن عبدالرحمن آل سعود والكعبة المشرفة؛ الخلف: منظر للمسجد الحرام في مكة. اللون أزرق، الأبعاد 166x74 مم.',
+            en: 'SAR 500 - Front: King Abdulaziz ibn Abdulrahman Al Saud with the Holy Kaaba; Back: Panorama of the Grand Mosque in Makkah. Blue palette, 166x74 mm.'
+        }
+    },
+    {
+        denomination: { ar: '200 ريال سعودي', en: 'SAR 200 Banknote' },
+        images: {
+            front: 'assets/200.png',
+            back: 'assets/2001.jpg'
+        },
+        caption: {
+            ar: '200 ريال - الوجه: صورة الملك عبدالعزيز وشعار رؤية 2030 المجسم؛ الخلف: صورة لقصر الحكم في الرياض. اللون رمادي، الأبعاد 163x73 مم.',
+            en: 'SAR 200 - Front: King Abdulaziz with the three-dimensional Vision 2030 emblem; Back: Qasr Al Hukm in Riyadh. Gray palette, 163x73 mm.'
+        }
+    },
+    {
+        denomination: { ar: '100 ريال سعودي', en: 'SAR 100 Banknote' },
+        images: {
+            front: 'assets/100.png',
+            back: 'assets/1001.png'
+        },
+        caption: {
+            ar: '100 ريال - الوجه: صورة الملك سلمان بن عبدالعزيز والقبة الخضراء للمسجد النبوي؛ الخلف: منظر للمسجد النبوي بالمدينة المنورة. اللون أحمر، الأبعاد 160x72 مم.',
+            en: "SAR 100 - Front: King Salman bin Abdulaziz with the Green Dome of the Prophet's Mosque; Back: View of Al-Masjid an-Nabawi in Madinah. Red palette, 160x72 mm."
+        }
+    },
+    {
+        denomination: { ar: '50 ريال سعودي', en: 'SAR 50 Banknote' },
+        images: {
+            front: 'assets/50.png',
+            back: 'assets/501.png'
+        },
+        caption: {
+            ar: '50 ريال - الوجه: صورة الملك سلمان بن عبدالعزيز ومسجد قبة الصخرة؛ الخلف: منظر للمسجد الأقصى في القدس الشريف. اللون أخضر، الأبعاد 155x70 مم.',
+            en: 'SAR 50 - Front: King Salman bin Abdulaziz with the Dome of the Rock; Back: View of Al-Aqsa Mosque in Jerusalem. Green palette, 155x70 mm.'
+        }
+    },
+    {
+        denomination: { ar: '10 ريالات سعودية', en: 'SAR 10 Banknote' },
+        images: {
+            front: 'assets/10.png',
+            back: 'assets/101.png'
+        },
+        caption: {
+            ar: '10 ريالات - الوجه: صورة الملك سلمان وقصر الملك عبدالعزيز في المربع؛ الخلف: منظر لمركز الملك عبدالله المالي في الرياض. اللون بني، الأبعاد 150x68 مم.',
+            en: 'SAR 10 - Front: King Salman with King Abdulaziz Historical Palace in Al Murabba; Back: King Abdullah Financial District in Riyadh. Brown palette, 150x68 mm.'
+        }
+    },
+    {
+        denomination: { ar: '5 ريالات سعودية', en: 'SAR 5 Banknote' },
+        images: {
+            front: 'assets/5.png',
+            back: 'assets/51.png'
+        },
+        caption: {
+            ar: '5 ريالات - الوجه: صورة الملك سلمان ومنظر حقل الشيبة في الربع الخالي؛ الخلف: زهور برية من السعودية. اللون أرجواني، الأبعاد 145x66 مم.',
+            en: 'SAR 5 - Front: King Salman with the Shaybah oil field in the Empty Quarter; Back: Native wildflowers of Saudi Arabia. Purple palette, 145x66 mm.'
+        }
+    },
+    {
+        denomination: { ar: 'ريالان', en: 'SAR 2 Coin' },
+        images: {
+            front: 'assets/2.png',
+            back: 'assets/2r.png'
+        },
+        caption: {
+            ar: 'عملة ريالان - الوجه: صورة الملك عبدالعزيز بالذهب ضمن إطار فضي وزخارف نباتية وشعار المملكة؛ الخلف: الرقم 2 واسم الفئة بالعربية والإنجليزية مع سنة 1438هـ/2016م.',
+            en: 'SAR 2 Coin - Front: King Abdulaziz in gold within a silver frame with botanical motifs and the Saudi emblem; Back: Numeral 2 with the denomination in Arabic and English and the year 1438H/2016.'
+        }
+    },
+    {
+        denomination: { ar: 'خمسون هللة', en: '50 Halala Coin' },
+        images: {
+            front: 'assets/50r.png',
+            back: 'assets/50rr.png'
+        },
+        caption: {
+            ar: 'عملة خمسون هللة - الوجه: شعار المملكة ولقب الملك وسنة الإصدار بزخارف نباتية؛ الخلف: الرقم 50 واسم الفئة بالعربية والإنجليزية.',
+            en: '50 Halala Coin - Front: Saudi emblem, royal title, and mint year with botanical patterns; Back: Numeral 50 with the denomination in Arabic and English.'
+        }
+    },
+    {
+        denomination: { ar: 'خمس وعشرون هللة', en: '25 Halala Coin' },
+        images: {
+            front: 'assets/25r.png',
+            back: 'assets/25rr.png'
+        },
+        caption: {
+            ar: 'عملة خمس وعشرون هللة - الوجه: شعار المملكة واسم الملك مع سنة الإصدار؛ الخلف: الرقم 25 واسم الفئة بالعربية والإنجليزية وزخارف حولية.',
+            en: '25 Halala Coin - Front: Saudi emblem, royal name, and mint year; Back: Numeral 25 with the denomination in Arabic and English and circular ornaments.'
+        }
+    },
+    {
+        denomination: { ar: 'عشر هللات', en: '10 Halala Coin' },
+        images: {
+            front: 'assets/10r.png',
+            back: 'assets/10rr.png'
+        },
+        caption: {
+            ar: 'عملة عشر هللات - الوجه: شعار المملكة واسم الملك وسنة الإصدار بزخارف نباتية؛ الخلف: الرقم 10 واسم الفئة بالعربية والإنجليزية.',
+            en: '10 Halala Coin - Front: Saudi emblem, royal name, and mint year with botanical motifs; Back: Numeral 10 with the denomination in Arabic and English.'
+        }
+    },
+    {
+        denomination: { ar: 'خمس هللات', en: '5 Halala Coin' },
+        images: {
+            front: 'assets/5r.png',
+            back: 'assets/5rr.png'
+        },
+        caption: {
+            ar: 'عملة خمس هللات - الوجه: شعار المملكة واسم الملك وسنة الإصدار؛ الخلف: الرقم 5 واسم الفئة بالعربية والإنجليزية بزخارف نباتية.',
+            en: '5 Halala Coin - Front: Saudi emblem, royal name, and mint year; Back: Numeral 5 with the denomination in Arabic and English and botanical etching.'
+        }
+    },
+    {
+        denomination: { ar: 'هللة واحدة', en: '1 Halala Coin' },
+        images: {
+            front: 'assets/1r.png',
+            back: 'assets/1rr.png'
+        },
+        caption: {
+            ar: 'عملة هللة واحدة - الوجه: شعار المملكة واسم الملك وسنة الإصدار بزخارف نباتية؛ الخلف: الرقم 1 واسم الفئة بالعربية والإنجليزية.',
+            en: '1 Halala Coin - Front: Saudi emblem, royal name, and mint year with botanical detailing; Back: Numeral 1 with the denomination in Arabic and English.'
+        }
+    }
+];
+
+let paymentsState = null;
+let paymentsModal = null;
+
 // ===== Current Language =====
 let currentLang = localStorage.getItem('language') || 'ar';
 
@@ -239,6 +381,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeScrollAnimations();
     initializeSmoothScroll();
     initializeCTA();
+    initializePaymentsModal();
+    initializePaymentsSlider();
+    initializePaymentsDiscoverButtons();
 });
 
 // ===== CTA Button =====
@@ -292,6 +437,10 @@ function setLanguage(lang) {
             btn.classList.add('active');
         }
     });
+
+    if (paymentsState && paymentsState.initialized) {
+        refreshPaymentsSliderLanguage();
+    }
 }
 
 // ===== Navigation Functions =====
@@ -391,11 +540,258 @@ function initializeScrollAnimations() {
     });
 }
 
+// ===== Payments Slider =====
+function initializePaymentsSlider() {
+    const modalElement = document.getElementById('payments-modal');
+    const dialog = modalElement ? modalElement.querySelector('.payments-modal-dialog') : null;
+    const slider = document.getElementById('payments-slider');
+    const frontImage = document.getElementById('payments-image-front');
+    const backImage = document.getElementById('payments-image-back');
+    const titleAr = document.getElementById('payments-title-ar');
+    const titleEn = document.getElementById('payments-title-en');
+    const indicators = document.getElementById('payments-indicators');
+    const prev = document.getElementById('payments-prev');
+    const next = document.getElementById('payments-next');
+
+    if (!modalElement || !dialog || !slider || !frontImage || !backImage || !titleAr || !titleEn || !indicators) {
+        paymentsState = null;
+        return;
+    }
+
+    paymentsState = {
+        index: 0,
+        modal: modalElement,
+        dialog,
+        slider,
+        frontImage,
+        backImage,
+        titleAr,
+        titleEn,
+        indicators,
+        prev,
+        next,
+        initialized: false
+    };
+
+    buildPaymentsIndicators();
+
+    if (paymentsState.prev) {
+        paymentsState.prev.addEventListener('click', () => changePaymentsSlide(-1));
+    }
+    if (paymentsState.next) {
+        paymentsState.next.addEventListener('click', () => changePaymentsSlide(1));
+    }
+
+    paymentsState.initialized = true;
+    refreshPaymentsSliderLanguage();
+}
+
+function buildPaymentsIndicators() {
+    if (!paymentsState || !paymentsState.indicators) {
+        return;
+    }
+
+    paymentsState.indicators.innerHTML = '';
+
+    paymentsSlides.forEach((slide, index) => {
+        const indicator = document.createElement('button');
+        indicator.type = 'button';
+        indicator.dataset.index = index;
+        indicator.setAttribute('role', 'tab');
+        indicator.addEventListener('click', () => goToPaymentsSlide(index));
+        paymentsState.indicators.appendChild(indicator);
+    });
+}
+
+function changePaymentsSlide(delta) {
+    if (!paymentsState) {
+        return;
+    }
+
+    const nextIndex = (paymentsState.index + delta + paymentsSlides.length) % paymentsSlides.length;
+    goToPaymentsSlide(nextIndex);
+}
+
+function goToPaymentsSlide(index) {
+    if (!paymentsState || !paymentsSlides[index]) {
+        return;
+    }
+
+    paymentsState.index = index;
+    updatePaymentsSlideContent();
+}
+
+function updatePaymentsSlideContent() {
+    if (!paymentsState) {
+        return;
+    }
+
+    const slide = paymentsSlides[paymentsState.index];
+
+    paymentsState.frontImage.src = slide.images.front;
+    paymentsState.backImage.src = slide.images.back;
+
+    const frontAlt = `${slide.denomination.ar} - الوجه | ${slide.denomination.en} - Front`;
+    const backAlt = `${slide.denomination.ar} - الخلف | ${slide.denomination.en} - Back`;
+
+    paymentsState.frontImage.alt = frontAlt;
+    paymentsState.backImage.alt = backAlt;
+
+    paymentsState.titleAr.textContent = slide.denomination.ar;
+    paymentsState.titleEn.textContent = slide.denomination.en;
+
+    updatePaymentsIndicatorsState();
+    setPaymentsNavLabels();
+}
+
+function updatePaymentsIndicatorsState() {
+    if (!paymentsState || !paymentsState.indicators) {
+        return;
+    }
+
+    const buttons = paymentsState.indicators.querySelectorAll('button');
+    buttons.forEach(button => {
+        const idx = Number(button.dataset.index || 0);
+        const isActive = idx === paymentsState.index;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        button.setAttribute('tabindex', isActive ? '0' : '-1');
+
+        const slide = paymentsSlides[idx];
+        if (slide) {
+            const label = currentLang === 'ar' ? slide.denomination.ar : slide.denomination.en;
+            button.setAttribute('aria-label', label);
+            button.title = label;
+        }
+    });
+}
+
+function setPaymentsNavLabels() {
+    if (!paymentsState) {
+        return;
+    }
+
+    if (paymentsState.prev) {
+        paymentsState.prev.setAttribute('aria-label', currentLang === 'ar' ? 'العملة السابقة' : 'Previous banknote');
+    }
+    if (paymentsState.next) {
+        paymentsState.next.setAttribute('aria-label', currentLang === 'ar' ? 'العملة التالية' : 'Next banknote');
+    }
+}
+
+function refreshPaymentsSliderLanguage() {
+    if (!paymentsState) {
+        return;
+    }
+
+    updatePaymentsSlideContent();
+
+    const showArabic = currentLang === 'ar';
+
+    paymentsState.titleAr.style.display = showArabic ? 'block' : 'none';
+    paymentsState.titleEn.style.display = showArabic ? 'none' : 'block';
+}
+
+// ===== Payments Discover Buttons =====
+function initializePaymentsDiscoverButtons() {
+    const buttons = document.querySelectorAll('.payments-discover-btn');
+
+    if (!buttons.length) {
+        return;
+    }
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (!paymentsState || !paymentsState.modal) {
+                initializePaymentsSlider();
+            }
+            openPaymentsModal();
+        });
+    });
+}
+
 // ===== Form Placeholder (for when Zoho form is added) =====
 function addZohoForm(embedCode) {
     const placeholder = document.getElementById('zoho-form-placeholder');
     if (placeholder && embedCode) {
         placeholder.innerHTML = embedCode;
+    }
+}
+
+function initializePaymentsModal() {
+    const modalElement = document.getElementById('payments-modal');
+
+    if (!modalElement) {
+        paymentsModal = null;
+        return;
+    }
+
+    const dialog = modalElement.querySelector('.payments-modal-dialog');
+    const closeTriggers = modalElement.querySelectorAll('[data-close="true"]');
+
+    paymentsModal = {
+        element: modalElement,
+        dialog,
+        closeTriggers
+    };
+
+    closeTriggers.forEach(trigger => {
+        trigger.addEventListener('click', closePaymentsModal);
+    });
+
+    modalElement.addEventListener('click', (event) => {
+        if (event.target === modalElement) {
+            closePaymentsModal();
+        }
+    });
+
+    document.addEventListener('keydown', handlePaymentsModalKeydown);
+}
+
+function handlePaymentsModalKeydown(event) {
+    if (event.key === 'Escape' && paymentsModal && paymentsModal.element && paymentsModal.element.classList.contains('is-open')) {
+        closePaymentsModal();
+    }
+}
+
+function openPaymentsModal() {
+    if (!paymentsModal || !paymentsModal.element) {
+        initializePaymentsModal();
+    }
+
+    if (!paymentsModal || !paymentsModal.element) {
+        return;
+    }
+
+    if (!paymentsState || !paymentsState.modal) {
+        initializePaymentsSlider();
+    }
+
+    paymentsModal.element.classList.add('is-open');
+    document.body.classList.add('modal-open');
+
+    if (paymentsModal.dialog) {
+        paymentsModal.dialog.classList.add('is-highlighted');
+        paymentsModal.dialog.setAttribute('tabindex', '-1');
+        paymentsModal.dialog.focus({ preventScroll: true });
+        setTimeout(() => {
+            if (paymentsModal && paymentsModal.dialog) {
+                paymentsModal.dialog.classList.remove('is-highlighted');
+            }
+        }, 1200);
+    }
+}
+
+function closePaymentsModal() {
+    if (!paymentsModal || !paymentsModal.element) {
+        return;
+    }
+
+    paymentsModal.element.classList.remove('is-open');
+    document.body.classList.remove('modal-open');
+
+    if (paymentsModal.dialog) {
+        paymentsModal.dialog.classList.remove('is-highlighted');
     }
 }
 

@@ -7,8 +7,8 @@
     --light-gold: #f4e4bc;
     --white: #ffffff;
     --light-gray: #f5f5f5;
-    --gray: #666666;
-    --dark-gray: #333333;
+    --gray: #000000;
+    --dark-gray: #000000;
     --font-arabic: 'Cairo', sans-serif;
     --font-english: 'Inter', sans-serif;
     --transition: all 0.3s ease;
@@ -29,7 +29,7 @@ html {
 
 body {
     font-family: var(--font-arabic);
-    color: var(--dark-gray);
+    color: #000000;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -773,6 +773,45 @@ body[dir="rtl"] .cta-button.primary:hover svg {
     }
 }
 
+@media (max-width: 600px) {
+    .hero {
+        height: auto;
+        min-height: auto;
+        padding: 110px 0 60px;
+        display: block;
+    }
+
+    .hero-background {
+        background-attachment: scroll;
+    }
+
+    .hero-content {
+        padding: 0 18px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.35;
+    }
+
+    .hero-title-main {
+        font-size: 2.2rem;
+    }
+
+    .hero-description {
+        font-size: 0.98rem;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    .hero-actions {
+        margin-bottom: 32px;
+        gap: 12px;
+    }
+}
+
 @media (max-width: 576px) {
     .card-image {
         height: 150px;
@@ -925,6 +964,183 @@ body[dir="rtl"] .cta-button.primary:hover svg {
     font-size: 0.94rem;
 }
 
+.travel-item.payments-card {
+    position: relative;
+    flex-direction: column;
+    gap: 18px;
+    padding: 22px 24px 26px;
+    background: linear-gradient(135deg, rgba(19, 62, 153, 0.11), rgba(255, 255, 255, 0.98));
+}
+
+.travel-item.payments-card .payments-slider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 22px 24px;
+    border-radius: 18px;
+    border: 1px solid rgba(19, 62, 153, 0.14);
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.65);
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.travel-item.payments-card .payments-slider-frame {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.travel-item.payments-card .payments-note-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.travel-item.payments-card .payments-faces {
+    display: grid;
+    gap: 10px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.travel-item.payments-card .payments-faces img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(19, 62, 153, 0.14);
+    box-shadow: 0 10px 24px rgba(19, 62, 153, 0.12);
+    padding: 10px;
+}
+
+.travel-item.payments-card .payments-caption {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #000000;
+    text-align: center;
+}
+
+.travel-item.payments-card .payments-caption .lang-en-text {
+    color: #000000;
+    font-size: 0.85rem;
+}
+
+.travel-item.payments-card .payments-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(19, 62, 153, 0.22);
+    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    backdrop-filter: blur(3px);
+}
+
+.travel-item.payments-card .payments-nav.prev {
+    left: 16px;
+}
+
+.travel-item.payments-card .payments-nav.next {
+    right: 16px;
+}
+
+.travel-item.payments-card .payments-nav:hover {
+    background: rgba(19, 62, 153, 0.38);
+    color: #fff;
+}
+
+.travel-item.payments-card .payments-indicators {
+    display: none;
+}
+
+.travel-item.payments-card .payments-indicators button {
+    width: 18px;
+    height: 6px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(19, 62, 153, 0.2);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.travel-item.payments-card .payments-indicators button.active {
+    background: rgba(19, 62, 153, 0.85);
+    transform: scaleX(1.4);
+}
+
+.travel-item.payments-card .travel-item-content {
+    background: transparent;
+    padding: 0;
+    gap: 12px;
+}
+
+.travel-item.payments-card .travel-item-title {
+    font-size: 1.3rem;
+}
+
+.travel-item.payments-card .travel-item-text {
+    font-size: 0.96rem;
+    line-height: 1.7;
+}
+
+.travel-group.travel-group-essentials {
+    padding: 42px 36px;
+    border-radius: 28px;
+    border: 1px solid rgba(19, 62, 153, 0.14);
+    background: linear-gradient(135deg, rgba(12, 40, 110, 0.08), rgba(255, 255, 255, 0.96));
+    box-shadow: 0 28px 70px rgba(12, 40, 110, 0.16);
+}
+
+.travel-group-essentials .travel-group-header {
+    margin-bottom: 12px;
+}
+
+.travel-group-essentials .travel-list {
+    gap: 26px;
+}
+
+.travel-group-essentials .travel-item.payments-card {
+    grid-column: 1 / -1;
+}
+
+.payments-card-header {
+    padding: 0 0 10px;
+    border-bottom: 1px solid rgba(19, 62, 153, 0.12);
+}
+
+.payments-card-title {
+    font-size: 1.45rem;
+    margin-bottom: 6px;
+}
+
+.payments-card-intro {
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: #000000;
+}
+
 @media (max-width: 992px) {
     .travel-guide-layout {
         gap: 40px;
@@ -941,6 +1157,43 @@ body[dir="rtl"] .cta-button.primary:hover svg {
 
     .travel-group-title {
         font-size: 1.8rem;
+    }
+
+    .travel-group.travel-group-essentials {
+        padding: 34px 28px;
+    }
+
+    .travel-item.payments-card .payments-slider {
+        padding: 28px 44px 28px;
+    }
+
+    .travel-item.payments-card .payments-nav {
+        position: static;
+        transform: none;
+        margin-top: 16px;
+    }
+
+    .travel-item.payments-card .payments-slider {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .travel-item.payments-card .payments-nav.prev,
+    .travel-item.payments-card .payments-nav.next {
+        left: auto;
+        right: auto;
+    }
+
+    .travel-item.payments-card .payments-faces img {
+        height: 210px;
+    }
+
+    .travel-item.payments-card .payments-indicators {
+        margin-top: 10px;
+    }
+
+    .travel-item.payments-card .payments-slider {
+        max-width: 460px;
     }
 
     .transport-grid {
@@ -1012,6 +1265,28 @@ body[dir="rtl"] .cta-button.primary:hover svg {
 
     .transport-grid {
         grid-template-columns: 1fr;
+    }
+
+    .travel-item.payments-card {
+        padding: 20px 20px 24px;
+    }
+
+    .travel-item.payments-card .payments-slider {
+        padding: 18px 18px 22px;
+    }
+
+    .travel-item.payments-card .payments-nav {
+        position: static;
+        transform: none;
+        margin-top: 6px;
+    }
+
+    .travel-item.payments-card .payments-slider {
+        gap: 12px;
+    }
+
+    .travel-item.payments-card .payments-faces img {
+        height: 170px;
     }
 }
 
@@ -1860,6 +2135,74 @@ body[dir="ltr"] .section-title::after {
     }
 }
 
+@media (max-width: 600px) {
+    .payments-modal {
+        align-items: center;
+    }
+
+    .payments-modal-dialog {
+        width: 92vw;
+        max-height: 100vh;
+        border-radius: 18px;
+        padding: 24px 18px 28px;
+        overflow-y: auto;
+        margin: auto;
+    }
+
+    .payments-modal-close {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+        font-size: 1.3rem;
+    }
+
+    .payments-modal-header {
+        text-align: center;
+    }
+
+    .payments-modal-title {
+        font-size: 1.45rem;
+        line-height: 1.35;
+    }
+
+    .payments-modal .payments-slider {
+        padding: 16px 12px 18px;
+        gap: 10px;
+    }
+
+    .payments-modal .payments-nav {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+
+    .payments-modal .payments-faces img {
+        height: min(55vw, 190px);
+    }
+}
+
+@media (max-width: 420px) {
+    .payments-modal-dialog {
+        padding: 22px 14px 26px;
+        gap: 16px;
+    }
+
+    .payments-modal-close {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+    }
+
+    .payments-modal .payments-slider {
+        gap: 8px;
+    }
+
+    .payments-modal .payments-faces img {
+        height: min(60vw, 150px);
+    }
+}
+
 /* Scroll animations */
 .fade-in {
     opacity: 0;
@@ -1870,6 +2213,287 @@ body[dir="ltr"] .section-title::after {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.payments-discover-btn {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(19, 62, 153, 0.4);
+    background: rgba(19, 62, 153, 0.08);
+    color: var(--primary-blue);
+    font-size: 0.94rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payments-discover-btn:hover,
+.payments-discover-btn:focus-visible {
+    background: rgba(19, 62, 153, 0.18);
+    border-color: rgba(19, 62, 153, 0.6);
+    color: #fff;
+}
+
+.payments-discover-btn:active {
+    transform: translateY(1px);
+}
+
+.payments-slider.is-highlighted {
+    box-shadow: 0 0 0 3px rgba(19, 62, 153, 0.18), 0 16px 36px rgba(19, 62, 153, 0.22);
+}
+
+.travel-item.payments-info-card:hover {
+    border-color: rgba(19, 62, 153, 0.32);
+    box-shadow: 0 32px 80px rgba(19, 62, 153, 0.2);
+}
+
+.payments-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(8, 18, 40, 0.6);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.payments-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.payments-modal-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.payments-modal-dialog {
+    position: relative;
+    background: #ffffff;
+    border-radius: 26px;
+    width: min(92vw, 760px);
+    max-height: 90vh;
+    overflow: hidden;
+    padding: 30px 34px 36px;
+    box-shadow: 0 40px 90px rgba(9, 24, 60, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transform: translateY(12px);
+    transition: transform 0.3s ease;
+}
+
+.payments-modal.is-open .payments-modal-dialog {
+    transform: translateY(0);
+}
+
+.payments-modal-dialog.is-highlighted {
+    box-shadow: 0 0 0 4px rgba(19, 62, 153, 0.2), 0 40px 90px rgba(9, 24, 60, 0.25);
+}
+
+.payments-modal-header {
+    text-align: center;
+}
+
+.payments-modal-title {
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+}
+
+.payments-modal-subtitle {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #000000;
+    margin: 0;
+}
+
+.payments-modal-close {
+    position: absolute;
+    top: 14px;
+    inset-inline-end: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(19, 62, 153, 0.12);
+    color: var(--primary-blue);
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.payments-modal-close:hover,
+.payments-modal-close:focus-visible {
+    background: rgba(19, 62, 153, 0.24);
+    color: #fff;
+}
+
+.payments-modal .payments-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 18px 22px;
+    border-radius: 18px;
+    border: 1px solid rgba(19, 62, 153, 0.15);
+    background: rgba(247, 250, 255, 0.96);
+}
+
+.payments-modal .payments-slider-frame {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.payments-modal .payments-note-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.payments-modal .payments-faces {
+    display: grid;
+    gap: 8px;
+    border-radius: 16px;
+    border: 1px solid rgba(19, 62, 153, 0.14);
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(241, 246, 255, 0.88));
+}
+
+.payments-modal .payments-faces img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+}
+
+.payments-modal .payments-nav {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(19, 62, 153, 0.22);
+    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+}
+
+.payments-modal .payments-nav:hover,
+.payments-modal .payments-nav:focus-visible {
+    background: rgba(19, 62, 153, 0.32);
+    color: #fff;
+}
+
+.payments-modal .payments-nav.prev {
+    margin-inline-start: -2px;
+}
+
+.payments-modal .payments-nav.next {
+    margin-inline-end: -2px;
+}
+
+.payments-modal .payments-indicators {
+    display: none;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .payments-modal-dialog {
+        width: min(96vw, 520px);
+        padding: 26px 20px 30px;
+        border-radius: 22px;
+    }
+
+    .payments-modal .payments-slider {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 16px 20px;
+    }
+
+    .payments-modal .payments-nav {
+        width: 34px;
+        height: 34px;
+        font-size: 1.1rem;
+    }
+
+    .payments-modal .payments-faces img {
+        height: 170px;
+    }
+}
+
+@media (max-width: 576px) {
+    .payments-modal {
+        align-items: center;
+    }
+
+    .payments-modal-dialog {
+        width: 92vw;
+        max-height: 92vh;
+        border-radius: 18px;
+        padding: 22px 16px 26px;
+        overflow-y: auto;
+    }
+
+    .payments-modal-close {
+        top: 10px;
+        inset-inline-end: 10px;
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+    }
+
+    .payments-modal-header {
+        text-align: center;
+    }
+
+    .payments-modal-title {
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+
+    .payments-modal .payments-slider {
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .payments-modal .payments-nav {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+        align-self: center;
+    }
+
+    .payments-modal .payments-faces img {
+        height: min(60vw, 160px);
+        padding: 0;
+    }
 }
 
 
