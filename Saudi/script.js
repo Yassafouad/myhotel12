@@ -51,6 +51,11 @@ const translations = {
         'travel.card6.title': 'طرق الدفع والعملات',
         'travel.card6.text': 'الريال السعودي هو العملة الرسمية، وتدعم المتاجر والفنادق بطاقات الدفع الدولية، كما تتوفر المحافظ الرقمية مثل مدى وأبل باي لتسهيل عمليات الشراء.',
         'payments.discover': 'اكتشف العملات',
+        'culture.discover': 'استكشف الثقافة',
+        'culture.gallery.title': 'التراث الثقافي لدى اليونسكو',
+        'culture.gallery.subtitle': '',
+        'culture.nav.prev': 'الموقع السابق',
+        'culture.nav.next': 'الموقع التالي',
         'payments.gallery.title': 'العملات السعودية',
         'travel.card7.title': 'الرعاية الصحية',
         'travel.card7.text': 'تتوفر في السعودية منشآت طبية متقدمة في المدن الرئيسية، ويُنصح بحمل تأمين صحي ساري، ومعرفة أقرب المراكز الطبية والمستشفيات خلال رحلتك.',
@@ -166,6 +171,11 @@ const translations = {
         'travel.card6.title': 'Payments & Currency',
         'travel.card6.text': 'The Saudi Riyal (SAR) is the official currency. International cards, Mada, and digital wallets like Apple Pay and Google Pay are widely accepted.',
         'payments.discover': 'Discover the Currency Gallery',
+        'culture.discover': 'Discover Culture',
+        'culture.gallery.title': 'UNESCO Cultural Heritage in Saudi Arabia',
+        'culture.gallery.subtitle': '',
+        'culture.nav.prev': 'Previous site',
+        'culture.nav.next': 'Next site',
         'payments.gallery.title': 'Saudi Currency Gallery',
         'travel.card7.title': 'Healthcare',
         'travel.card7.text': 'Saudi cities host advanced hospitals and clinics—carry active health insurance and map nearby facilities before you travel.',
@@ -367,8 +377,109 @@ const paymentsSlides = [
     }
 ];
 
+const cultureSlides = [
+    {
+        title: { ar: 'الحجر (مدائن صالح)', en: 'Hegra (Al-Hijr)' },
+        description: {
+            ar: 'كانت إحدى مدن مملكة الأنباط المهمة في شمال الجزيرة العربية، ويضم الموقع مقابر ضخمة منحوتة في القرن الأول قبل الميلاد مع ما يقارب 50 نقشاً ورسماً صخرياً.',
+            en: 'Once a major Nabataean city in northern Arabia, the site preserves monumental tombs carved in the 1st century BCE along with nearly 50 inscriptions and petroglyphs.'
+        },
+        image: 'assets/hgr.png',
+        alt: {
+            ar: 'واجهات مقابر نبطية منحوتة في صخور موقع الحجر',
+            en: 'Rock-cut Nabataean tomb façades at the Hegra heritage site'
+        }
+    },
+    {
+        title: { ar: 'حي الطريف في الدرعية', en: 'At-Turaif District in Diriyah' },
+        description: {
+            ar: 'تتوزع مساكنه الطينية على ضفاف وادي حنيفة وتحيط به أسوار وأبراج تاريخية، وقد كان أول عاصمة لأسرة آل سعود.',
+            en: 'Its mudbrick palaces line the banks of Wadi Hanifah and are encircled by historic walls and towers; it served as the first capital of the Al Saud family.'
+        },
+        image: 'assets/hy.png',
+        alt: {
+            ar: 'عمارة طينية تاريخية في حي الطريف بالدرعية',
+            en: 'Historic mudbrick architecture inside the At-Turaif district of Diriyah'
+        }
+    },
+    {
+        title: { ar: 'جدة التاريخية', en: 'Historic Jeddah' },
+        description: {
+            ar: 'تقع في قلب المدينة وتضم معالم تراثية مثل سور جدة وحاراتها القديمة، إلى جانب مجموعة من المساجد والأسواق التاريخية.',
+            en: 'Located in the heart of the city, the district features the old Jeddah wall, traditional quarters, and a collection of historic mosques and souqs.'
+        },
+        image: 'assets/gdh.png',
+        alt: {
+            ar: 'لافتة تعريفية تشير إلى جدة التاريخية كموقع تراث عالمي',
+            en: 'Signboard highlighting Historic Jeddah as a UNESCO World Heritage Site'
+        }
+    },
+    {
+        title: { ar: 'الفنون الصخرية في منطقة حائل', en: 'Rock Art of the Hail Region' },
+        description: {
+            ar: 'تشمل رسومات جبل أم سنمان في جبة والمنجور ورّاط في الشويمس، وتعرض نقوشاً للبشر والحيوانات يعود عمرها إلى عشرة آلاف عام.',
+            en: 'Includes the petroglyphs of Jabal Umm Sinman at Jubbah and Jabal Al-Manjur and Raat at Shuwaymis, depicting humans and animals from more than 10,000 years ago.'
+        },
+        image: 'assets/fnon.png',
+        alt: {
+            ar: 'نقوش ورسومات صخرية في منطقة حائل',
+            en: 'Ancient petroglyphs carved into sandstone in the Hail region'
+        }
+    },
+    {
+        title: { ar: 'واحة الأحساء', en: 'Al-Ahsa Oasis' },
+        description: {
+            ar: 'أكبر واحة نخيل محاطة بالرمال في العالم، تضم أكثر من مليون ونصف نخلة ومعالم تراثية مثل مسجد جواثى وقصر إبراهيم وسوق القيصرية.',
+            en: 'The world’s largest oasis of palm groves encircled by desert dunes, with more than 1.5 million date palms and heritage landmarks such as Jawatha Mosque, Ibrahim Palace, and Qaisariya Market.'
+        },
+        image: 'assets/whae.png',
+        alt: {
+            ar: 'نخيل كثيفة تمتد في واحة الأحساء',
+            en: 'Dense palm groves stretching across the Al-Ahsa Oasis'
+        }
+    },
+    {
+        title: { ar: 'منطقة حِمى الثقافية', en: 'Hima Cultural Area' },
+        description: {
+            ar: 'تضم رسوماً ونقوشاً صخرية تعود لما قبل التاريخ بكتابات ثمودية ومسند جنوبي وخط كوفي، إضافةً إلى دوائر حجرية ومقابر ركامية تمتد من الألفية السابعة حتى الأولى قبل الميلاد.',
+            en: 'Hosts prehistoric rock carvings with Thamudic, South Arabian, and early Arabic scripts, plus stone circles and cairn tombs dating from the 7th to the 1st millennia BCE.'
+        },
+        image: 'assets/th.png',
+        alt: {
+            ar: 'تكوين صخري بركاني في منطقة حِمى الثقافية',
+            en: 'Basalt plateau and cairn structures within the Hima cultural landscape'
+        }
+    },
+    {
+        title: { ar: 'محمية عروق بني معارض', en: 'Uruq Bani Ma’arid Reserve' },
+        description: {
+            ar: 'تقع على الطرف الغربي من الربع الخالي وتعد موطناً لـ 106 أنواع من النباتات، وأعيد توطين المها العربي وغزلان الريم والجبل والنعام، كما سجل بها أكثر من 100 نوع من الطيور.',
+            en: 'Situated on the western edge of the Empty Quarter, the reserve protects 106 plant species and has reintroduced Arabian oryx, sand and mountain gazelles, ostriches, and over 100 bird species.'
+        },
+        image: 'assets/mh.png',
+        alt: {
+            ar: 'كثبان رملية ونباتات صحراوية في محمية عروق بني معارض',
+            en: 'Sweeping dunes with desert shrubs inside the Uruq Bani Ma’arid Reserve'
+        }
+    },
+    {
+        title: { ar: 'المنظر الثقافي لمنطقة الفاو الأثرية', en: 'Cultural Landscape of the Al-Faw Archaeological Area' },
+        description: {
+            ar: 'كانت عاصمة لمملكة كندة لما يزيد عن خمسة قرون وتضم منازل وأسواقاً وآباراً وتماثيل برونزية وكتابات بالخط الجنوبي المسند.',
+            en: 'Served as the capital of the Kindah kingdom for over five centuries, featuring houses, markets, wells, bronze figurines, and inscriptions in the Ancient South Arabian script.'
+        },
+        image: 'assets/mn.png',
+        alt: {
+            ar: 'لوحة جدارية أثرية من موقع الفاو',
+            en: 'Ancient wall painting fragment from the Al-Faw archaeological site'
+        }
+    }
+];
+
 let paymentsState = null;
 let paymentsModal = null;
+let cultureState = null;
+let cultureModal = null;
 
 // ===== Current Language =====
 let currentLang = localStorage.getItem('language') || 'ar';
@@ -384,6 +495,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initializePaymentsModal();
     initializePaymentsSlider();
     initializePaymentsDiscoverButtons();
+    initializeCultureModal();
+    initializeCultureSlider();
+    initializeCultureDiscoverButtons();
 });
 
 // ===== CTA Button =====
@@ -440,6 +554,9 @@ function setLanguage(lang) {
 
     if (paymentsState && paymentsState.initialized) {
         refreshPaymentsSliderLanguage();
+    }
+    if (cultureState && cultureState.initialized) {
+        refreshCultureSliderLanguage();
     }
 }
 
@@ -768,7 +885,7 @@ function openPaymentsModal() {
     }
 
     paymentsModal.element.classList.add('is-open');
-    document.body.classList.add('modal-open');
+    updateBodyModalState();
 
     if (paymentsModal.dialog) {
         paymentsModal.dialog.classList.add('is-highlighted');
@@ -788,10 +905,271 @@ function closePaymentsModal() {
     }
 
     paymentsModal.element.classList.remove('is-open');
-    document.body.classList.remove('modal-open');
+    updateBodyModalState();
 
     if (paymentsModal.dialog) {
         paymentsModal.dialog.classList.remove('is-highlighted');
+    }
+}
+
+// ===== Culture Slider =====
+function initializeCultureSlider() {
+    const modalElement = document.getElementById('culture-modal');
+    const dialog = modalElement ? modalElement.querySelector('.culture-modal-dialog') : null;
+    const slider = document.getElementById('culture-slider');
+    const image = document.getElementById('culture-image');
+    const titleAr = document.getElementById('culture-title-ar');
+    const titleEn = document.getElementById('culture-title-en');
+    const descAr = document.getElementById('culture-desc-ar');
+    const descEn = document.getElementById('culture-desc-en');
+    const indicators = document.getElementById('culture-indicators');
+    const prev = document.getElementById('culture-prev');
+    const next = document.getElementById('culture-next');
+
+    if (!modalElement || !dialog || !slider || !image || !titleAr || !titleEn || !descAr || !descEn || !indicators) {
+        cultureState = null;
+        return;
+    }
+
+    cultureState = {
+        index: 0,
+        modal: modalElement,
+        dialog,
+        slider,
+        image,
+        titleAr,
+        titleEn,
+        descAr,
+        descEn,
+        indicators,
+        prev,
+        next,
+        initialized: false
+    };
+
+    buildCultureIndicators();
+
+    if (cultureState.prev) {
+        cultureState.prev.addEventListener('click', () => changeCultureSlide(-1));
+    }
+    if (cultureState.next) {
+        cultureState.next.addEventListener('click', () => changeCultureSlide(1));
+    }
+
+    cultureState.initialized = true;
+    refreshCultureSliderLanguage();
+}
+
+function buildCultureIndicators() {
+    if (!cultureState || !cultureState.indicators) {
+        return;
+    }
+
+    cultureState.indicators.innerHTML = '';
+
+    cultureSlides.forEach((slide, index) => {
+        const indicator = document.createElement('button');
+        indicator.type = 'button';
+        indicator.dataset.index = index;
+        indicator.setAttribute('role', 'tab');
+        indicator.addEventListener('click', () => goToCultureSlide(index));
+        cultureState.indicators.appendChild(indicator);
+    });
+}
+
+function changeCultureSlide(delta) {
+    if (!cultureState) {
+        return;
+    }
+
+    const nextIndex = (cultureState.index + delta + cultureSlides.length) % cultureSlides.length;
+    goToCultureSlide(nextIndex);
+}
+
+function goToCultureSlide(index) {
+    if (!cultureState || !cultureSlides[index]) {
+        return;
+    }
+
+    cultureState.index = index;
+    updateCultureSlideContent();
+}
+
+function updateCultureSlideContent() {
+    if (!cultureState) {
+        return;
+    }
+
+    const slide = cultureSlides[cultureState.index];
+
+    cultureState.image.src = slide.image;
+    cultureState.image.alt = `${slide.alt.ar} | ${slide.alt.en}`;
+
+    cultureState.titleAr.textContent = slide.title.ar;
+    cultureState.titleEn.textContent = slide.title.en;
+    cultureState.descAr.textContent = slide.description.ar;
+    cultureState.descEn.textContent = slide.description.en;
+
+    updateCultureIndicatorsState();
+    setCultureNavLabels();
+}
+
+function updateCultureIndicatorsState() {
+    if (!cultureState || !cultureState.indicators) {
+        return;
+    }
+
+    const buttons = cultureState.indicators.querySelectorAll('button');
+    buttons.forEach(button => {
+        const idx = Number(button.dataset.index || 0);
+        const isActive = idx === cultureState.index;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        button.setAttribute('tabindex', isActive ? '0' : '-1');
+
+        const slide = cultureSlides[idx];
+        if (slide) {
+            const label = currentLang === 'ar' ? slide.title.ar : slide.title.en;
+            button.setAttribute('aria-label', label);
+            button.title = label;
+        }
+    });
+}
+
+function setCultureNavLabels() {
+    if (!cultureState) {
+        return;
+    }
+
+    const prevLabel = translations[currentLang]?.['culture.nav.prev'] || (currentLang === 'ar' ? 'الموقع السابق' : 'Previous site');
+    const nextLabel = translations[currentLang]?.['culture.nav.next'] || (currentLang === 'ar' ? 'الموقع التالي' : 'Next site');
+
+    if (cultureState.prev) {
+        cultureState.prev.setAttribute('aria-label', prevLabel);
+    }
+    if (cultureState.next) {
+        cultureState.next.setAttribute('aria-label', nextLabel);
+    }
+}
+
+function refreshCultureSliderLanguage() {
+    if (!cultureState) {
+        return;
+    }
+
+    updateCultureSlideContent();
+
+    const showArabic = currentLang === 'ar';
+
+    cultureState.titleAr.style.display = showArabic ? 'block' : 'none';
+    cultureState.titleEn.style.display = showArabic ? 'none' : 'block';
+    cultureState.descAr.style.display = showArabic ? 'block' : 'none';
+    cultureState.descEn.style.display = showArabic ? 'none' : 'block';
+}
+
+// ===== Culture Discover Buttons =====
+function initializeCultureDiscoverButtons() {
+    const buttons = document.querySelectorAll('.culture-discover-btn');
+
+    if (!buttons.length) {
+        return;
+    }
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (!cultureState || !cultureState.modal) {
+                initializeCultureSlider();
+            }
+            openCultureModal();
+        });
+    });
+}
+
+function initializeCultureModal() {
+    const modalElement = document.getElementById('culture-modal');
+
+    if (!modalElement) {
+        cultureModal = null;
+        return;
+    }
+
+    const dialog = modalElement.querySelector('.culture-modal-dialog');
+    const closeTriggers = modalElement.querySelectorAll('[data-close="true"]');
+
+    cultureModal = {
+        element: modalElement,
+        dialog,
+        closeTriggers
+    };
+
+    closeTriggers.forEach(trigger => {
+        trigger.addEventListener('click', closeCultureModal);
+    });
+
+    modalElement.addEventListener('click', (event) => {
+        if (event.target === modalElement) {
+            closeCultureModal();
+        }
+    });
+
+    document.addEventListener('keydown', handleCultureModalKeydown);
+}
+
+function handleCultureModalKeydown(event) {
+    if (event.key === 'Escape' && cultureModal && cultureModal.element && cultureModal.element.classList.contains('is-open')) {
+        closeCultureModal();
+    }
+}
+
+function openCultureModal() {
+    if (!cultureModal || !cultureModal.element) {
+        initializeCultureModal();
+    }
+
+    if (!cultureModal || !cultureModal.element) {
+        return;
+    }
+
+    if (!cultureState || !cultureState.modal) {
+        initializeCultureSlider();
+    }
+
+    cultureModal.element.classList.add('is-open');
+    updateBodyModalState();
+
+    if (cultureModal.dialog) {
+        cultureModal.dialog.classList.add('is-highlighted');
+        cultureModal.dialog.setAttribute('tabindex', '-1');
+        cultureModal.dialog.focus({ preventScroll: true });
+        setTimeout(() => {
+            if (cultureModal && cultureModal.dialog) {
+                cultureModal.dialog.classList.remove('is-highlighted');
+            }
+        }, 1200);
+    }
+}
+
+function closeCultureModal() {
+    if (!cultureModal || !cultureModal.element) {
+        return;
+    }
+
+    cultureModal.element.classList.remove('is-open');
+    updateBodyModalState();
+
+    if (cultureModal.dialog) {
+        cultureModal.dialog.classList.remove('is-highlighted');
+    }
+}
+
+function updateBodyModalState() {
+    const paymentsOpen = paymentsModal && paymentsModal.element && paymentsModal.element.classList.contains('is-open');
+    const cultureOpen = cultureModal && cultureModal.element && cultureModal.element.classList.contains('is-open');
+
+    if (paymentsOpen || cultureOpen) {
+        document.body.classList.add('modal-open');
+    } else {
+        document.body.classList.remove('modal-open');
     }
 }
 

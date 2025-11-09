@@ -91,6 +91,9 @@
                     <p class="about-item-text" data-i18n="about.card1.text">
                         تتميز المملكة العربية السعودية بتراث غني وتقاليد عريقة؛ فقد كانت عبر التاريخ مركزًا تجاريًا مهمًا وشهدت ولادة الدين الإسلامي، وتشهد اليوم تحولًا ثقافيًا يوازن بين العادات القديمة وروح العصر الحديث، مع إبراز مواقع مدرجة على قائمة التراث العالمي لليونسكو مثل الحِجر (مدائن صالح) وحي الطريف بالدرعية وواحة الأحساء، إضافة إلى مبادرات ثقافية ومهرجانات عالمية تعرّف الزوار على الفنون والموسيقى .
                     </p>
+                    <button class="culture-discover-btn" type="button" data-i18n="culture.discover">
+                        استكشف التراث
+                    </button>
                 </div>
                 <div class="about-item">
                     <h3 class="about-item-title" data-i18n="about.card2.title">اللغة</h3>
@@ -305,6 +308,42 @@
                 </button>
                 <div class="payments-indicators" id="payments-indicators" role="tablist" aria-label="شرائح العملات"></div>
             </div>
+        </div>
+    </div>
+
+    <div class="culture-modal" id="culture-modal" aria-hidden="true">
+        <div class="culture-modal-overlay" data-close="true"></div>
+        <div class="culture-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="culture-modal-title">
+            <button class="culture-modal-close" type="button" aria-label="إغلاق" data-close="true">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="culture-modal-header">
+                <h3 class="culture-modal-title" id="culture-modal-title" data-i18n="culture.gallery.title">التراث الثقافي لدى اليونسكو</h3>
+            </div>
+            <div class="culture-slider" id="culture-slider" aria-live="polite">
+                <button type="button" class="culture-nav prev" id="culture-prev" aria-label="الموقع السابق">
+                    <span aria-hidden="true">&#10094;</span>
+                </button>
+                <div class="culture-slider-frame">
+                    <div class="culture-slide-media">
+                        <img id="culture-image" alt="موقع تراثي في السعودية" loading="lazy">
+                    </div>
+                    <div class="culture-slide-text">
+                        <h4 class="culture-slide-title">
+                            <span class="lang-ar-text" id="culture-title-ar"></span>
+                            <span class="lang-en-text" id="culture-title-en"></span>
+                        </h4>
+                        <p class="culture-slide-description">
+                            <span class="lang-ar-text" id="culture-desc-ar"></span>
+                            <span class="lang-en-text" id="culture-desc-en"></span>
+                        </p>
+                    </div>
+                </div>
+                <button type="button" class="culture-nav next" id="culture-next" aria-label="الموقع التالي">
+                    <span aria-hidden="true">&#10095;</span>
+                </button>
+            </div>
+            <div class="culture-indicators" id="culture-indicators" role="tablist" aria-label="مواقع التراث"></div>
         </div>
     </div>
 
